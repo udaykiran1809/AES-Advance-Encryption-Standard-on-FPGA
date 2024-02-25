@@ -1,0 +1,2118 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Dec  2 11:11:29 2019
+| Host         : lenovo running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file controller_timing_summary_routed.rpt -pb controller_timing_summary_routed.pb -rpx controller_timing_summary_routed.rpx -warn_on_violation
+| Design       : controller
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     53.009        0.000                      0                  674        0.053        0.000                      0                  674       49.500        0.000                       0                   355  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----        ------------         ----------      --------------
+sys_clk_pin  {0.000 50.000}       100.000         10.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        53.009        0.000                      0                  674        0.053        0.000                      0                  674       49.500        0.000                       0                   355  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       53.009ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.053ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       49.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             53.009ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[88]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        47.037ns  (logic 8.027ns (17.065%)  route 39.010ns (82.935%))
+  Logic Levels:           42  (LUT2=7 LUT4=4 LUT6=23 MUXF7=4 MUXF8=4)
+  Clock Path Skew:        0.051ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.092ns = ( 105.092 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.229ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.626     5.229    clk_IBUF_BUFG
+    SLICE_X55Y51         FDCE                                         r  aes_data_in_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y51         FDCE (Prop_fdce_C_Q)         0.456     5.685 r  aes_data_in_reg[18]/Q
+                         net (fo=34, routed)          2.205     7.889    aes/AES_rounds/r9/bs/sbox6/g0_b0__7_i_9[2]
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.013 r  aes/AES_rounds/r9/bs/sbox6/g2_b7__156/O
+                         net (fo=1, routed)           0.853     8.866    aes/AES_rounds/r0/bs/sbox2/g0_b0__16_i_38_0
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.990 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__6_i_10/O
+                         net (fo=5, routed)           0.659     9.649    aes/AES_rounds/r0/bs/sbox2/aes_data_in_reg[23][7]
+    SLICE_X38Y48         LUT6 (Prop_lut6_I0_O)        0.124     9.773 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7/O
+                         net (fo=4, routed)           1.035    10.808    aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7_n_0
+    SLICE_X36Y48         LUT4 (Prop_lut4_I1_O)        0.124    10.932 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_1/O
+                         net (fo=32, routed)          1.867    12.798    aes/AES_rounds/r0/bs/sbox2/r1_out[56]
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.922 r  aes/AES_rounds/r0/bs/sbox2/g0_b7__7/O
+                         net (fo=1, routed)           0.689    13.612    aes/AES_rounds/r1/bs/sbox7/g0_b0__40_i_32
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    13.736 r  aes/AES_rounds/r1/bs/sbox7/g0_b0__20_i_41/O
+                         net (fo=5, routed)           0.957    14.693    aes/AES_rounds/r0/bs/sbox9/sbox_out_15[15]
+    SLICE_X31Y48         LUT2 (Prop_lut2_I1_O)        0.152    14.845 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7/O
+                         net (fo=4, routed)           0.405    15.250    aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7_n_0
+    SLICE_X30Y48         LUT4 (Prop_lut4_I3_O)        0.326    15.576 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_1/O
+                         net (fo=32, routed)          1.685    17.261    aes/AES_rounds/r0/bs/sbox9/r2_out[56]
+    SLICE_X23Y45         LUT6 (Prop_lut6_I0_O)        0.124    17.385 r  aes/AES_rounds/r0/bs/sbox9/g3_b3__23/O
+                         net (fo=1, routed)           0.000    17.385    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22_3
+    SLICE_X23Y45         MUXF7 (Prop_muxf7_I1_O)      0.245    17.630 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53/O
+                         net (fo=1, routed)           0.000    17.630    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53_n_0
+    SLICE_X23Y45         MUXF8 (Prop_muxf8_I0_O)      0.104    17.734 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22/O
+                         net (fo=3, routed)           0.682    18.416    aes/AES_rounds/r0/bs/sbox12/sbox_out_14[11]
+    SLICE_X24Y44         LUT2 (Prop_lut2_I1_O)        0.341    18.757 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__36_i_20/O
+                         net (fo=3, routed)           0.468    19.225    aes/AES_rounds/r0/bs/sbox6/g0_b0__36
+    SLICE_X24Y44         LUT6 (Prop_lut6_I4_O)        0.332    19.557 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4/O
+                         net (fo=32, routed)          1.628    21.185    aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I3_O)        0.124    21.309 r  aes/AES_rounds/r0/bs/sbox6/g0_b7__37/O
+                         net (fo=1, routed)           0.689    21.999    aes/AES_rounds/r3/bs/sbox5/g0_b0__72_i_41_3
+    SLICE_X12Y43         LUT6 (Prop_lut6_I5_O)        0.124    22.123 r  aes/AES_rounds/r3/bs/sbox5/g0_b0__62_i_8/O
+                         net (fo=8, routed)           1.330    23.453    aes/AES_rounds/r0/bs/sbox6/sbox_out_13[9]
+    SLICE_X13Y38         LUT2 (Prop_lut2_I0_O)        0.152    23.605 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__61_i_7/O
+                         net (fo=4, routed)           0.689    24.295    aes/AES_rounds/r0/bs/sbox5/g3_b7__61_0
+    SLICE_X14Y39         LUT6 (Prop_lut6_I5_O)        0.332    24.627 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__61_i_4/O
+                         net (fo=32, routed)          2.012    26.639    aes/AES_rounds/r0/bs/sbox5/r4_out[107]
+    SLICE_X13Y32         LUT6 (Prop_lut6_I3_O)        0.124    26.763 r  aes/AES_rounds/r0/bs/sbox5/g2_b1__61/O
+                         net (fo=1, routed)           0.000    26.763    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14_1
+    SLICE_X13Y32         MUXF7 (Prop_muxf7_I1_O)      0.245    27.008 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48/O
+                         net (fo=1, routed)           0.000    27.008    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48_n_0
+    SLICE_X13Y32         MUXF8 (Prop_muxf8_I0_O)      0.104    27.112 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14/O
+                         net (fo=3, routed)           0.822    27.934    aes/AES_rounds/r0/bs/sbox0/sbox_out_12[22]
+    SLICE_X13Y31         LUT2 (Prop_lut2_I1_O)        0.344    28.278 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_9/O
+                         net (fo=3, routed)           0.835    29.112    aes/AES_rounds/r0/bs/sbox10/g0_b0__70
+    SLICE_X12Y29         LUT6 (Prop_lut6_I5_O)        0.332    29.444 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__70_i_2/O
+                         net (fo=32, routed)          1.694    31.138    aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_34
+    SLICE_X15Y15         LUT6 (Prop_lut6_I1_O)        0.124    31.262 r  aes/AES_rounds/r0/bs/sbox5/g2_b4__70/O
+                         net (fo=1, routed)           0.000    31.262    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9_1
+    SLICE_X15Y15         MUXF7 (Prop_muxf7_I1_O)      0.245    31.507 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10/O
+                         net (fo=1, routed)           0.000    31.507    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10_n_0
+    SLICE_X15Y15         MUXF8 (Prop_muxf8_I0_O)      0.104    31.611 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9/O
+                         net (fo=3, routed)           1.326    32.938    aes/AES_rounds/r0/bs/sbox5/sbox_out_11[10]
+    SLICE_X22Y14         LUT2 (Prop_lut2_I0_O)        0.316    33.254 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_25/O
+                         net (fo=3, routed)           0.430    33.684    aes/AES_rounds/r0/bs/sbox7/g0_b0__88
+    SLICE_X23Y14         LUT6 (Prop_lut6_I4_O)        0.124    33.808 r  aes/AES_rounds/r0/bs/sbox7/g0_b0__88_i_5/O
+                         net (fo=32, routed)          1.462    35.270    aes/AES_rounds/r0/bs/sbox14/g0_b0__101_i_15
+    SLICE_X36Y17         LUT6 (Prop_lut6_I4_O)        0.124    35.394 r  aes/AES_rounds/r0/bs/sbox14/g2_b2__88/O
+                         net (fo=1, routed)           0.000    35.394    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10_2
+    SLICE_X36Y17         MUXF7 (Prop_muxf7_I0_O)      0.238    35.632 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16/O
+                         net (fo=1, routed)           0.000    35.632    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16_n_0
+    SLICE_X36Y17         MUXF8 (Prop_muxf8_I0_O)      0.104    35.736 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10/O
+                         net (fo=3, routed)           1.578    37.314    aes/AES_rounds/r0/bs/sbox14/sbox_out_10[15]
+    SLICE_X44Y22         LUT2 (Prop_lut2_I0_O)        0.316    37.630 r  aes/AES_rounds/r0/bs/sbox14/g0_b0__100_i_23/O
+                         net (fo=3, routed)           0.436    38.066    aes/AES_rounds/r0/bs/sbox11/g0_b0__102_1
+    SLICE_X44Y20         LUT4 (Prop_lut4_I3_O)        0.124    38.190 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__102_i_3/O
+                         net (fo=32, routed)          2.218    40.408    aes/AES_rounds/r0/bs/sbox11/r7_out[50]
+    SLICE_X59Y22         LUT6 (Prop_lut6_I2_O)        0.124    40.532 r  aes/AES_rounds/r0/bs/sbox11/g2_b7__102/O
+                         net (fo=1, routed)           0.881    41.414    aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_1_1
+    SLICE_X58Y22         LUT6 (Prop_lut6_I1_O)        0.124    41.538 r  aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_7/O
+                         net (fo=11, routed)          1.368    42.906    aes/AES_rounds/r0/bs/sbox11/sbox_out_9[13]
+    SLICE_X55Y26         LUT6 (Prop_lut6_I0_O)        0.124    43.030 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__123_i_2/O
+                         net (fo=32, routed)          1.816    44.845    aes/AES_rounds/r0/bs/sbox11/r8_out[89]
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    44.969 r  aes/AES_rounds/r0/bs/sbox11/g0_b7__123/O
+                         net (fo=1, routed)           0.670    45.640    aes/AES_rounds/r8/bs/sbox11/aes_temp_out[119]_P_i_3_1
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    45.764 r  aes/AES_rounds/r8/bs/sbox11/g0_b0__136_i_10/O
+                         net (fo=8, routed)           1.076    46.840    aes/AES_rounds/r0/bs/sbox6/sbox_out_8[23]
+    SLICE_X66Y35         LUT2 (Prop_lut2_I1_O)        0.156    46.996 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7/O
+                         net (fo=4, routed)           0.631    47.627    aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7_n_0
+    SLICE_X67Y38         LUT4 (Prop_lut4_I3_O)        0.355    47.982 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_1/O
+                         net (fo=32, routed)          1.567    49.548    aes/AES_rounds/r0/bs/sbox6/r9_out[88]
+    SLICE_X66Y38         LUT6 (Prop_lut6_I0_O)        0.124    49.672 f  aes/AES_rounds/r0/bs/sbox6/g1_b0__139/O
+                         net (fo=1, routed)           1.090    50.762    aes/AES_rounds/r9/bs/sbox11/aes_temp_out_reg[88]_P_0
+    SLICE_X66Y38         LUT6 (Prop_lut6_I1_O)        0.124    50.886 f  aes/AES_rounds/r9/bs/sbox11/aes_temp_out[88]_P_i_2/O
+                         net (fo=1, routed)           1.255    52.142    aes/AES_rounds/r0/bs/sbox6/sbox_out[0]
+    SLICE_X55Y48         LUT6 (Prop_lut6_I3_O)        0.124    52.266 r  aes/AES_rounds/r0/bs/sbox6/aes_temp_out[88]_P_i_1/O
+                         net (fo=1, routed)           0.000    52.266    aes_n_34
+    SLICE_X55Y48         FDRE                                         r  aes_temp_out_reg[88]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.670   105.092    clk_IBUF_BUFG
+    SLICE_X55Y48         FDRE                                         r  aes_temp_out_reg[88]_P/C
+                         clock pessimism              0.187   105.279    
+                         clock uncertainty           -0.035   105.244    
+    SLICE_X55Y48         FDRE (Setup_fdre_C_D)        0.031   105.275    aes_temp_out_reg[88]_P
+  -------------------------------------------------------------------
+                         required time                        105.275    
+                         arrival time                         -52.266    
+  -------------------------------------------------------------------
+                         slack                                 53.009    
+
+Slack (MET) :             53.394ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[79]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.704ns  (logic 7.509ns (16.078%)  route 39.195ns (83.922%))
+  Logic Levels:           40  (LUT2=6 LUT4=2 LUT5=1 LUT6=24 MUXF7=4 MUXF8=3)
+  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.100ns = ( 105.100 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.233ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.630     5.233    clk_IBUF_BUFG
+    SLICE_X58Y54         FDCE                                         r  aes_data_in_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y54         FDCE (Prop_fdce_C_Q)         0.518     5.751 r  aes_data_in_reg[9]/Q
+                         net (fo=34, routed)          2.633     8.384    aes/AES_rounds/r9/bs/sbox0/g0_b0__8_i_37[1]
+    SLICE_X45Y54         LUT6 (Prop_lut6_I0_O)        0.124     8.508 r  aes/AES_rounds/r9/bs/sbox0/g0_b7__157/O
+                         net (fo=2, routed)           0.000     8.508    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_7_0
+    SLICE_X45Y54         MUXF7 (Prop_muxf7_I0_O)      0.212     8.720 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__9_i_11/O
+                         net (fo=2, routed)           0.452     9.172    aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_5
+    SLICE_X45Y54         LUT6 (Prop_lut6_I1_O)        0.299     9.471 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_7/O
+                         net (fo=4, routed)           1.270    10.741    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_0
+    SLICE_X44Y51         LUT4 (Prop_lut4_I1_O)        0.124    10.865 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1/O
+                         net (fo=32, routed)          1.676    12.541    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1_n_0
+    SLICE_X38Y53         LUT6 (Prop_lut6_I0_O)        0.124    12.665 r  aes/AES_rounds/r0/bs/sbox1/g0_b7__10/O
+                         net (fo=1, routed)           0.694    13.359    aes/AES_rounds/r1/bs/sbox10/g0_b0__31_i_7_1
+    SLICE_X38Y53         LUT6 (Prop_lut6_I1_O)        0.124    13.483 r  aes/AES_rounds/r1/bs/sbox10/g0_b0__30_i_10/O
+                         net (fo=5, routed)           1.016    14.499    aes/AES_rounds/r0/bs/sbox1/sbox_out_15[23]
+    SLICE_X32Y53         LUT2 (Prop_lut2_I0_O)        0.152    14.651 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7/O
+                         net (fo=4, routed)           0.634    15.286    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7_n_0
+    SLICE_X31Y52         LUT6 (Prop_lut6_I5_O)        0.326    15.612 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2/O
+                         net (fo=32, routed)          1.620    17.231    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2_n_0
+    SLICE_X30Y55         LUT6 (Prop_lut6_I1_O)        0.124    17.355 r  aes/AES_rounds/r0/bs/sbox1/g1_b7__31/O
+                         net (fo=1, routed)           0.858    18.214    aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_1
+    SLICE_X30Y55         LUT6 (Prop_lut6_I0_O)        0.124    18.338 r  aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_10/O
+                         net (fo=11, routed)          1.782    20.119    aes/AES_rounds/r0/bs/sbox1/sbox_out_14[26]
+    SLICE_X19Y47         LUT6 (Prop_lut6_I3_O)        0.124    20.243 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2/O
+                         net (fo=32, routed)          1.555    21.798    aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2_n_0
+    SLICE_X20Y44         LUT6 (Prop_lut6_I1_O)        0.124    21.922 r  aes/AES_rounds/r0/bs/sbox1/g0_b1__44/O
+                         net (fo=1, routed)           0.000    21.922    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19_3
+    SLICE_X20Y44         MUXF7 (Prop_muxf7_I1_O)      0.245    22.167 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56/O
+                         net (fo=1, routed)           0.000    22.167    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56_n_0
+    SLICE_X20Y44         MUXF8 (Prop_muxf8_I0_O)      0.104    22.271 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19/O
+                         net (fo=5, routed)           1.024    23.294    aes/AES_rounds/r0/bs/sbox0/sbox_out_13[17]
+    SLICE_X22Y38         LUT5 (Prop_lut5_I4_O)        0.316    23.610 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__56_i_3/O
+                         net (fo=32, routed)          1.961    25.572    aes/AES_rounds/r0/bs/sbox0/r4_out[66]
+    SLICE_X13Y34         LUT6 (Prop_lut6_I2_O)        0.124    25.696 r  aes/AES_rounds/r0/bs/sbox0/g2_b7__56/O
+                         net (fo=1, routed)           0.811    26.507    aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_5_1
+    SLICE_X13Y35         LUT6 (Prop_lut6_I1_O)        0.124    26.631 r  aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_9/O
+                         net (fo=8, routed)           1.265    27.896    aes/AES_rounds/r0/bs/sbox5/sbox_out_12[10]
+    SLICE_X13Y29         LUT2 (Prop_lut2_I1_O)        0.152    28.048 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__69_i_7/O
+                         net (fo=4, routed)           0.641    28.689    aes/AES_rounds/r0/bs/sbox0/g3_b7__69_0
+    SLICE_X12Y30         LUT4 (Prop_lut4_I1_O)        0.332    29.021 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_5/O
+                         net (fo=32, routed)          1.645    30.666    aes/AES_rounds/r0/bs/sbox0/r5_out[44]
+    SLICE_X15Y22         LUT6 (Prop_lut6_I4_O)        0.124    30.790 r  aes/AES_rounds/r0/bs/sbox0/g1_b1__69/O
+                         net (fo=1, routed)           0.000    30.790    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14_1
+    SLICE_X15Y22         MUXF7 (Prop_muxf7_I1_O)      0.217    31.007 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49/O
+                         net (fo=1, routed)           0.000    31.007    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49_n_0
+    SLICE_X15Y22         MUXF8 (Prop_muxf8_I1_O)      0.094    31.101 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14/O
+                         net (fo=3, routed)           1.640    32.742    aes/AES_rounds/r0/bs/sbox11/sbox_out_11[9]
+    SLICE_X26Y19         LUT2 (Prop_lut2_I1_O)        0.341    33.083 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__93_i_8/O
+                         net (fo=3, routed)           0.481    33.563    aes/AES_rounds/r0/bs/sbox9/g3_b7__94
+    SLICE_X26Y19         LUT6 (Prop_lut6_I5_O)        0.332    33.895 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__94_i_2/O
+                         net (fo=32, routed)          1.517    35.412    aes/AES_rounds/r0/bs/sbox0/g0_b0__98_i_11[0]
+    SLICE_X33Y19         LUT6 (Prop_lut6_I1_O)        0.124    35.536 r  aes/AES_rounds/r0/bs/sbox0/g1_b3__94/O
+                         net (fo=1, routed)           0.000    35.536    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9_1
+    SLICE_X33Y19         MUXF7 (Prop_muxf7_I1_O)      0.245    35.781 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14/O
+                         net (fo=1, routed)           0.000    35.781    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14_n_0
+    SLICE_X33Y19         MUXF8 (Prop_muxf8_I0_O)      0.104    35.885 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9/O
+                         net (fo=3, routed)           1.118    37.003    aes/AES_rounds/r0/bs/sbox0/sbox_out_10[27]
+    SLICE_X40Y25         LUT2 (Prop_lut2_I0_O)        0.316    37.319 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__96_i_22/O
+                         net (fo=3, routed)           0.674    37.993    aes/AES_rounds/r0/bs/sbox10/g3_b7__96
+    SLICE_X42Y23         LUT6 (Prop_lut6_I4_O)        0.124    38.117 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__97_i_4/O
+                         net (fo=32, routed)          1.852    39.968    aes/AES_rounds/r0/bs/sbox10/r7_out[11]
+    SLICE_X61Y20         LUT6 (Prop_lut6_I3_O)        0.124    40.092 r  aes/AES_rounds/r0/bs/sbox10/g0_b7__97/O
+                         net (fo=1, routed)           0.881    40.974    aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_1
+    SLICE_X60Y20         LUT6 (Prop_lut6_I0_O)        0.124    41.098 r  aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_8/O
+                         net (fo=8, routed)           1.039    42.137    aes/AES_rounds/r0/bs/sbox10/sbox_out_9[6]
+    SLICE_X57Y24         LUT2 (Prop_lut2_I0_O)        0.124    42.261 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__121_i_7/O
+                         net (fo=4, routed)           0.514    42.776    aes/AES_rounds/r0/bs/sbox9/g3_b7__121_0
+    SLICE_X56Y24         LUT6 (Prop_lut6_I5_O)        0.124    42.900 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__121_i_4/O
+                         net (fo=32, routed)          1.645    44.544    aes/AES_rounds/r0/bs/sbox9/r8_out[75]
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    44.668 r  aes/AES_rounds/r0/bs/sbox9/g0_b7__121/O
+                         net (fo=1, routed)           0.670    45.339    aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_5_1
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    45.463 r  aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_8/O
+                         net (fo=8, routed)           1.727    47.190    aes/AES_rounds/r0/bs/sbox9/sbox_out_8[16]
+    SLICE_X57Y35         LUT2 (Prop_lut2_I0_O)        0.150    47.340 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__129_i_7/O
+                         net (fo=4, routed)           0.471    47.811    aes/AES_rounds/r0/bs/sbox4/g3_b7__129_0
+    SLICE_X56Y34         LUT6 (Prop_lut6_I5_O)        0.326    48.137 r  aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_4/O
+                         net (fo=32, routed)          1.653    49.789    aes/AES_rounds/r0/bs/sbox4/r9_out[11]
+    SLICE_X48Y40         LUT6 (Prop_lut6_I3_O)        0.124    49.913 r  aes/AES_rounds/r0/bs/sbox4/g1_b7__129/O
+                         net (fo=1, routed)           1.008    50.922    aes/AES_rounds/r9/bs/sbox1/aes_temp_out_reg[79]_P
+    SLICE_X47Y40         LUT6 (Prop_lut6_I0_O)        0.124    51.046 r  aes/AES_rounds/r9/bs/sbox1/aes_temp_out[79]_P_i_2/O
+                         net (fo=1, routed)           0.767    51.813    aes/AES_rounds/r0/bs/sbox4/r10_out[4]
+    SLICE_X46Y46         LUT6 (Prop_lut6_I3_O)        0.124    51.937 r  aes/AES_rounds/r0/bs/sbox4/aes_temp_out[79]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.937    aes_n_98
+    SLICE_X46Y46         FDRE                                         r  aes_temp_out_reg[79]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.678   105.100    clk_IBUF_BUFG
+    SLICE_X46Y46         FDRE                                         r  aes_temp_out_reg[79]_P/C
+                         clock pessimism              0.187   105.287    
+                         clock uncertainty           -0.035   105.252    
+    SLICE_X46Y46         FDRE (Setup_fdre_C_D)        0.079   105.331    aes_temp_out_reg[79]_P
+  -------------------------------------------------------------------
+                         required time                        105.331    
+                         arrival time                         -51.937    
+  -------------------------------------------------------------------
+                         slack                                 53.394    
+
+Slack (MET) :             53.453ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[94]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.642ns  (logic 8.027ns (17.210%)  route 38.615ns (82.790%))
+  Logic Levels:           42  (LUT2=7 LUT4=3 LUT6=24 MUXF7=4 MUXF8=4)
+  Clock Path Skew:        0.052ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.093ns = ( 105.093 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.229ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.626     5.229    clk_IBUF_BUFG
+    SLICE_X55Y51         FDCE                                         r  aes_data_in_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y51         FDCE (Prop_fdce_C_Q)         0.456     5.685 r  aes_data_in_reg[18]/Q
+                         net (fo=34, routed)          2.205     7.889    aes/AES_rounds/r9/bs/sbox6/g0_b0__7_i_9[2]
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.013 r  aes/AES_rounds/r9/bs/sbox6/g2_b7__156/O
+                         net (fo=1, routed)           0.853     8.866    aes/AES_rounds/r0/bs/sbox2/g0_b0__16_i_38_0
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.990 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__6_i_10/O
+                         net (fo=5, routed)           0.659     9.649    aes/AES_rounds/r0/bs/sbox2/aes_data_in_reg[23][7]
+    SLICE_X38Y48         LUT6 (Prop_lut6_I0_O)        0.124     9.773 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7/O
+                         net (fo=4, routed)           1.035    10.808    aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7_n_0
+    SLICE_X36Y48         LUT4 (Prop_lut4_I1_O)        0.124    10.932 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_1/O
+                         net (fo=32, routed)          1.867    12.798    aes/AES_rounds/r0/bs/sbox2/r1_out[56]
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.922 r  aes/AES_rounds/r0/bs/sbox2/g0_b7__7/O
+                         net (fo=1, routed)           0.689    13.612    aes/AES_rounds/r1/bs/sbox7/g0_b0__40_i_32
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    13.736 r  aes/AES_rounds/r1/bs/sbox7/g0_b0__20_i_41/O
+                         net (fo=5, routed)           0.957    14.693    aes/AES_rounds/r0/bs/sbox9/sbox_out_15[15]
+    SLICE_X31Y48         LUT2 (Prop_lut2_I1_O)        0.152    14.845 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7/O
+                         net (fo=4, routed)           0.405    15.250    aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7_n_0
+    SLICE_X30Y48         LUT4 (Prop_lut4_I3_O)        0.326    15.576 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_1/O
+                         net (fo=32, routed)          1.685    17.261    aes/AES_rounds/r0/bs/sbox9/r2_out[56]
+    SLICE_X23Y45         LUT6 (Prop_lut6_I0_O)        0.124    17.385 r  aes/AES_rounds/r0/bs/sbox9/g3_b3__23/O
+                         net (fo=1, routed)           0.000    17.385    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22_3
+    SLICE_X23Y45         MUXF7 (Prop_muxf7_I1_O)      0.245    17.630 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53/O
+                         net (fo=1, routed)           0.000    17.630    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53_n_0
+    SLICE_X23Y45         MUXF8 (Prop_muxf8_I0_O)      0.104    17.734 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22/O
+                         net (fo=3, routed)           0.682    18.416    aes/AES_rounds/r0/bs/sbox12/sbox_out_14[11]
+    SLICE_X24Y44         LUT2 (Prop_lut2_I1_O)        0.341    18.757 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__36_i_20/O
+                         net (fo=3, routed)           0.468    19.225    aes/AES_rounds/r0/bs/sbox6/g0_b0__36
+    SLICE_X24Y44         LUT6 (Prop_lut6_I4_O)        0.332    19.557 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4/O
+                         net (fo=32, routed)          1.628    21.185    aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I3_O)        0.124    21.309 r  aes/AES_rounds/r0/bs/sbox6/g0_b7__37/O
+                         net (fo=1, routed)           0.689    21.999    aes/AES_rounds/r3/bs/sbox5/g0_b0__72_i_41_3
+    SLICE_X12Y43         LUT6 (Prop_lut6_I5_O)        0.124    22.123 r  aes/AES_rounds/r3/bs/sbox5/g0_b0__62_i_8/O
+                         net (fo=8, routed)           1.330    23.453    aes/AES_rounds/r0/bs/sbox6/sbox_out_13[9]
+    SLICE_X13Y38         LUT2 (Prop_lut2_I0_O)        0.152    23.605 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__61_i_7/O
+                         net (fo=4, routed)           0.689    24.295    aes/AES_rounds/r0/bs/sbox5/g3_b7__61_0
+    SLICE_X14Y39         LUT6 (Prop_lut6_I5_O)        0.332    24.627 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__61_i_4/O
+                         net (fo=32, routed)          2.012    26.639    aes/AES_rounds/r0/bs/sbox5/r4_out[107]
+    SLICE_X13Y32         LUT6 (Prop_lut6_I3_O)        0.124    26.763 r  aes/AES_rounds/r0/bs/sbox5/g2_b1__61/O
+                         net (fo=1, routed)           0.000    26.763    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14_1
+    SLICE_X13Y32         MUXF7 (Prop_muxf7_I1_O)      0.245    27.008 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48/O
+                         net (fo=1, routed)           0.000    27.008    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48_n_0
+    SLICE_X13Y32         MUXF8 (Prop_muxf8_I0_O)      0.104    27.112 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14/O
+                         net (fo=3, routed)           0.822    27.934    aes/AES_rounds/r0/bs/sbox0/sbox_out_12[22]
+    SLICE_X13Y31         LUT2 (Prop_lut2_I1_O)        0.344    28.278 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_9/O
+                         net (fo=3, routed)           0.835    29.112    aes/AES_rounds/r0/bs/sbox10/g0_b0__70
+    SLICE_X12Y29         LUT6 (Prop_lut6_I5_O)        0.332    29.444 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__70_i_2/O
+                         net (fo=32, routed)          1.694    31.138    aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_34
+    SLICE_X15Y15         LUT6 (Prop_lut6_I1_O)        0.124    31.262 r  aes/AES_rounds/r0/bs/sbox5/g2_b4__70/O
+                         net (fo=1, routed)           0.000    31.262    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9_1
+    SLICE_X15Y15         MUXF7 (Prop_muxf7_I1_O)      0.245    31.507 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10/O
+                         net (fo=1, routed)           0.000    31.507    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10_n_0
+    SLICE_X15Y15         MUXF8 (Prop_muxf8_I0_O)      0.104    31.611 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9/O
+                         net (fo=3, routed)           1.326    32.938    aes/AES_rounds/r0/bs/sbox5/sbox_out_11[10]
+    SLICE_X22Y14         LUT2 (Prop_lut2_I0_O)        0.316    33.254 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_25/O
+                         net (fo=3, routed)           0.430    33.684    aes/AES_rounds/r0/bs/sbox7/g0_b0__88
+    SLICE_X23Y14         LUT6 (Prop_lut6_I4_O)        0.124    33.808 r  aes/AES_rounds/r0/bs/sbox7/g0_b0__88_i_5/O
+                         net (fo=32, routed)          1.462    35.270    aes/AES_rounds/r0/bs/sbox14/g0_b0__101_i_15
+    SLICE_X36Y17         LUT6 (Prop_lut6_I4_O)        0.124    35.394 r  aes/AES_rounds/r0/bs/sbox14/g2_b2__88/O
+                         net (fo=1, routed)           0.000    35.394    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10_2
+    SLICE_X36Y17         MUXF7 (Prop_muxf7_I0_O)      0.238    35.632 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16/O
+                         net (fo=1, routed)           0.000    35.632    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16_n_0
+    SLICE_X36Y17         MUXF8 (Prop_muxf8_I0_O)      0.104    35.736 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10/O
+                         net (fo=3, routed)           1.578    37.314    aes/AES_rounds/r0/bs/sbox14/sbox_out_10[15]
+    SLICE_X44Y22         LUT2 (Prop_lut2_I0_O)        0.316    37.630 r  aes/AES_rounds/r0/bs/sbox14/g0_b0__100_i_23/O
+                         net (fo=3, routed)           0.436    38.066    aes/AES_rounds/r0/bs/sbox11/g0_b0__102_1
+    SLICE_X44Y20         LUT4 (Prop_lut4_I3_O)        0.124    38.190 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__102_i_3/O
+                         net (fo=32, routed)          2.218    40.408    aes/AES_rounds/r0/bs/sbox11/r7_out[50]
+    SLICE_X59Y22         LUT6 (Prop_lut6_I2_O)        0.124    40.532 r  aes/AES_rounds/r0/bs/sbox11/g2_b7__102/O
+                         net (fo=1, routed)           0.881    41.414    aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_1_1
+    SLICE_X58Y22         LUT6 (Prop_lut6_I1_O)        0.124    41.538 r  aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_7/O
+                         net (fo=11, routed)          1.368    42.906    aes/AES_rounds/r0/bs/sbox11/sbox_out_9[13]
+    SLICE_X55Y26         LUT6 (Prop_lut6_I0_O)        0.124    43.030 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__123_i_2/O
+                         net (fo=32, routed)          1.816    44.845    aes/AES_rounds/r0/bs/sbox11/r8_out[89]
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    44.969 r  aes/AES_rounds/r0/bs/sbox11/g0_b7__123/O
+                         net (fo=1, routed)           0.670    45.640    aes/AES_rounds/r8/bs/sbox11/aes_temp_out[119]_P_i_3_1
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    45.764 r  aes/AES_rounds/r8/bs/sbox11/g0_b0__136_i_10/O
+                         net (fo=8, routed)           1.076    46.840    aes/AES_rounds/r0/bs/sbox6/sbox_out_8[23]
+    SLICE_X66Y35         LUT2 (Prop_lut2_I1_O)        0.156    46.996 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7/O
+                         net (fo=4, routed)           0.499    47.495    aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7_n_0
+    SLICE_X66Y37         LUT6 (Prop_lut6_I5_O)        0.355    47.850 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_2/O
+                         net (fo=32, routed)          1.525    49.374    aes/AES_rounds/r0/bs/sbox6/r9_out[89]
+    SLICE_X69Y40         LUT6 (Prop_lut6_I1_O)        0.124    49.498 f  aes/AES_rounds/r0/bs/sbox6/g0_b6__139/O
+                         net (fo=1, routed)           0.670    50.169    aes/AES_rounds/r9/bs/sbox11/aes_temp_out_reg[94]_P
+    SLICE_X69Y40         LUT6 (Prop_lut6_I0_O)        0.124    50.293 f  aes/AES_rounds/r9/bs/sbox11/aes_temp_out[94]_P_i_2/O
+                         net (fo=1, routed)           1.455    51.747    aes/AES_rounds/r0/bs/sbox6/sbox_out[3]
+    SLICE_X56Y48         LUT6 (Prop_lut6_I3_O)        0.124    51.871 r  aes/AES_rounds/r0/bs/sbox6/aes_temp_out[94]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.871    aes_n_28
+    SLICE_X56Y48         FDRE                                         r  aes_temp_out_reg[94]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.671   105.093    clk_IBUF_BUFG
+    SLICE_X56Y48         FDRE                                         r  aes_temp_out_reg[94]_P/C
+                         clock pessimism              0.187   105.280    
+                         clock uncertainty           -0.035   105.245    
+    SLICE_X56Y48         FDRE (Setup_fdre_C_D)        0.079   105.324    aes_temp_out_reg[94]_P
+  -------------------------------------------------------------------
+                         required time                        105.324    
+                         arrival time                         -51.871    
+  -------------------------------------------------------------------
+                         slack                                 53.453    
+
+Slack (MET) :             53.466ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[78]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.585ns  (logic 7.509ns (16.119%)  route 39.076ns (83.881%))
+  Logic Levels:           40  (LUT2=6 LUT4=2 LUT5=2 LUT6=23 MUXF7=4 MUXF8=3)
+  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.100ns = ( 105.100 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.233ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.630     5.233    clk_IBUF_BUFG
+    SLICE_X58Y54         FDCE                                         r  aes_data_in_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y54         FDCE (Prop_fdce_C_Q)         0.518     5.751 r  aes_data_in_reg[9]/Q
+                         net (fo=34, routed)          2.633     8.384    aes/AES_rounds/r9/bs/sbox0/g0_b0__8_i_37[1]
+    SLICE_X45Y54         LUT6 (Prop_lut6_I0_O)        0.124     8.508 r  aes/AES_rounds/r9/bs/sbox0/g0_b7__157/O
+                         net (fo=2, routed)           0.000     8.508    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_7_0
+    SLICE_X45Y54         MUXF7 (Prop_muxf7_I0_O)      0.212     8.720 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__9_i_11/O
+                         net (fo=2, routed)           0.452     9.172    aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_5
+    SLICE_X45Y54         LUT6 (Prop_lut6_I1_O)        0.299     9.471 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_7/O
+                         net (fo=4, routed)           1.270    10.741    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_0
+    SLICE_X44Y51         LUT4 (Prop_lut4_I1_O)        0.124    10.865 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1/O
+                         net (fo=32, routed)          1.676    12.541    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1_n_0
+    SLICE_X38Y53         LUT6 (Prop_lut6_I0_O)        0.124    12.665 r  aes/AES_rounds/r0/bs/sbox1/g0_b7__10/O
+                         net (fo=1, routed)           0.694    13.359    aes/AES_rounds/r1/bs/sbox10/g0_b0__31_i_7_1
+    SLICE_X38Y53         LUT6 (Prop_lut6_I1_O)        0.124    13.483 r  aes/AES_rounds/r1/bs/sbox10/g0_b0__30_i_10/O
+                         net (fo=5, routed)           1.016    14.499    aes/AES_rounds/r0/bs/sbox1/sbox_out_15[23]
+    SLICE_X32Y53         LUT2 (Prop_lut2_I0_O)        0.152    14.651 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7/O
+                         net (fo=4, routed)           0.634    15.286    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7_n_0
+    SLICE_X31Y52         LUT6 (Prop_lut6_I5_O)        0.326    15.612 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2/O
+                         net (fo=32, routed)          1.620    17.231    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2_n_0
+    SLICE_X30Y55         LUT6 (Prop_lut6_I1_O)        0.124    17.355 r  aes/AES_rounds/r0/bs/sbox1/g1_b7__31/O
+                         net (fo=1, routed)           0.858    18.214    aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_1
+    SLICE_X30Y55         LUT6 (Prop_lut6_I0_O)        0.124    18.338 r  aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_10/O
+                         net (fo=11, routed)          1.782    20.119    aes/AES_rounds/r0/bs/sbox1/sbox_out_14[26]
+    SLICE_X19Y47         LUT6 (Prop_lut6_I3_O)        0.124    20.243 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2/O
+                         net (fo=32, routed)          1.555    21.798    aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2_n_0
+    SLICE_X20Y44         LUT6 (Prop_lut6_I1_O)        0.124    21.922 r  aes/AES_rounds/r0/bs/sbox1/g0_b1__44/O
+                         net (fo=1, routed)           0.000    21.922    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19_3
+    SLICE_X20Y44         MUXF7 (Prop_muxf7_I1_O)      0.245    22.167 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56/O
+                         net (fo=1, routed)           0.000    22.167    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56_n_0
+    SLICE_X20Y44         MUXF8 (Prop_muxf8_I0_O)      0.104    22.271 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19/O
+                         net (fo=5, routed)           1.024    23.294    aes/AES_rounds/r0/bs/sbox0/sbox_out_13[17]
+    SLICE_X22Y38         LUT5 (Prop_lut5_I4_O)        0.316    23.610 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__56_i_3/O
+                         net (fo=32, routed)          1.961    25.572    aes/AES_rounds/r0/bs/sbox0/r4_out[66]
+    SLICE_X13Y34         LUT6 (Prop_lut6_I2_O)        0.124    25.696 r  aes/AES_rounds/r0/bs/sbox0/g2_b7__56/O
+                         net (fo=1, routed)           0.811    26.507    aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_5_1
+    SLICE_X13Y35         LUT6 (Prop_lut6_I1_O)        0.124    26.631 r  aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_9/O
+                         net (fo=8, routed)           1.265    27.896    aes/AES_rounds/r0/bs/sbox5/sbox_out_12[10]
+    SLICE_X13Y29         LUT2 (Prop_lut2_I1_O)        0.152    28.048 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__69_i_7/O
+                         net (fo=4, routed)           0.641    28.689    aes/AES_rounds/r0/bs/sbox0/g3_b7__69_0
+    SLICE_X12Y30         LUT4 (Prop_lut4_I1_O)        0.332    29.021 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_5/O
+                         net (fo=32, routed)          1.645    30.666    aes/AES_rounds/r0/bs/sbox0/r5_out[44]
+    SLICE_X15Y22         LUT6 (Prop_lut6_I4_O)        0.124    30.790 r  aes/AES_rounds/r0/bs/sbox0/g1_b1__69/O
+                         net (fo=1, routed)           0.000    30.790    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14_1
+    SLICE_X15Y22         MUXF7 (Prop_muxf7_I1_O)      0.217    31.007 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49/O
+                         net (fo=1, routed)           0.000    31.007    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49_n_0
+    SLICE_X15Y22         MUXF8 (Prop_muxf8_I1_O)      0.094    31.101 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14/O
+                         net (fo=3, routed)           1.640    32.742    aes/AES_rounds/r0/bs/sbox11/sbox_out_11[9]
+    SLICE_X26Y19         LUT2 (Prop_lut2_I1_O)        0.341    33.083 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__93_i_8/O
+                         net (fo=3, routed)           0.481    33.563    aes/AES_rounds/r0/bs/sbox9/g3_b7__94
+    SLICE_X26Y19         LUT6 (Prop_lut6_I5_O)        0.332    33.895 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__94_i_2/O
+                         net (fo=32, routed)          1.517    35.412    aes/AES_rounds/r0/bs/sbox0/g0_b0__98_i_11[0]
+    SLICE_X33Y19         LUT6 (Prop_lut6_I1_O)        0.124    35.536 r  aes/AES_rounds/r0/bs/sbox0/g1_b3__94/O
+                         net (fo=1, routed)           0.000    35.536    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9_1
+    SLICE_X33Y19         MUXF7 (Prop_muxf7_I1_O)      0.245    35.781 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14/O
+                         net (fo=1, routed)           0.000    35.781    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14_n_0
+    SLICE_X33Y19         MUXF8 (Prop_muxf8_I0_O)      0.104    35.885 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9/O
+                         net (fo=3, routed)           1.118    37.003    aes/AES_rounds/r0/bs/sbox0/sbox_out_10[27]
+    SLICE_X40Y25         LUT2 (Prop_lut2_I0_O)        0.316    37.319 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__96_i_22/O
+                         net (fo=3, routed)           0.674    37.993    aes/AES_rounds/r0/bs/sbox10/g3_b7__96
+    SLICE_X42Y23         LUT6 (Prop_lut6_I4_O)        0.124    38.117 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__97_i_4/O
+                         net (fo=32, routed)          1.852    39.968    aes/AES_rounds/r0/bs/sbox10/r7_out[11]
+    SLICE_X61Y20         LUT6 (Prop_lut6_I3_O)        0.124    40.092 r  aes/AES_rounds/r0/bs/sbox10/g0_b7__97/O
+                         net (fo=1, routed)           0.881    40.974    aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_1
+    SLICE_X60Y20         LUT6 (Prop_lut6_I0_O)        0.124    41.098 r  aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_8/O
+                         net (fo=8, routed)           1.039    42.137    aes/AES_rounds/r0/bs/sbox10/sbox_out_9[6]
+    SLICE_X57Y24         LUT2 (Prop_lut2_I0_O)        0.124    42.261 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__121_i_7/O
+                         net (fo=4, routed)           0.514    42.776    aes/AES_rounds/r0/bs/sbox9/g3_b7__121_0
+    SLICE_X56Y24         LUT6 (Prop_lut6_I5_O)        0.124    42.900 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__121_i_4/O
+                         net (fo=32, routed)          1.645    44.544    aes/AES_rounds/r0/bs/sbox9/r8_out[75]
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    44.668 r  aes/AES_rounds/r0/bs/sbox9/g0_b7__121/O
+                         net (fo=1, routed)           0.670    45.339    aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_5_1
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    45.463 r  aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_8/O
+                         net (fo=8, routed)           1.727    47.190    aes/AES_rounds/r0/bs/sbox9/sbox_out_8[16]
+    SLICE_X57Y35         LUT2 (Prop_lut2_I0_O)        0.150    47.340 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__129_i_7/O
+                         net (fo=4, routed)           0.481    47.821    aes/AES_rounds/r0/bs/sbox4/g3_b7__129_0
+    SLICE_X56Y34         LUT5 (Prop_lut5_I3_O)        0.326    48.147 r  aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_5/O
+                         net (fo=32, routed)          1.594    49.740    aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_5_n_0
+    SLICE_X47Y41         LUT6 (Prop_lut6_I4_O)        0.124    49.864 f  aes/AES_rounds/r0/bs/sbox4/g1_b6__129/O
+                         net (fo=1, routed)           0.847    50.712    aes/AES_rounds/r9/bs/sbox1/aes_temp_out_reg[78]_P
+    SLICE_X47Y41         LUT6 (Prop_lut6_I0_O)        0.124    50.836 f  aes/AES_rounds/r9/bs/sbox1/aes_temp_out[78]_P_i_2/O
+                         net (fo=1, routed)           0.859    51.694    aes/AES_rounds/r0/bs/sbox4/sbox_out[2]
+    SLICE_X48Y46         LUT6 (Prop_lut6_I3_O)        0.124    51.818 r  aes/AES_rounds/r0/bs/sbox4/aes_temp_out[78]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.818    aes_n_97
+    SLICE_X48Y46         FDRE                                         r  aes_temp_out_reg[78]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.678   105.100    clk_IBUF_BUFG
+    SLICE_X48Y46         FDRE                                         r  aes_temp_out_reg[78]_P/C
+                         clock pessimism              0.187   105.287    
+                         clock uncertainty           -0.035   105.252    
+    SLICE_X48Y46         FDRE (Setup_fdre_C_D)        0.032   105.284    aes_temp_out_reg[78]_P
+  -------------------------------------------------------------------
+                         required time                        105.284    
+                         arrival time                         -51.818    
+  -------------------------------------------------------------------
+                         slack                                 53.466    
+
+Slack (MET) :             53.476ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[75]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.576ns  (logic 7.509ns (16.122%)  route 39.067ns (83.878%))
+  Logic Levels:           40  (LUT2=6 LUT4=2 LUT5=1 LUT6=24 MUXF7=4 MUXF8=3)
+  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.100ns = ( 105.100 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.233ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.630     5.233    clk_IBUF_BUFG
+    SLICE_X58Y54         FDCE                                         r  aes_data_in_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y54         FDCE (Prop_fdce_C_Q)         0.518     5.751 r  aes_data_in_reg[9]/Q
+                         net (fo=34, routed)          2.633     8.384    aes/AES_rounds/r9/bs/sbox0/g0_b0__8_i_37[1]
+    SLICE_X45Y54         LUT6 (Prop_lut6_I0_O)        0.124     8.508 r  aes/AES_rounds/r9/bs/sbox0/g0_b7__157/O
+                         net (fo=2, routed)           0.000     8.508    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_7_0
+    SLICE_X45Y54         MUXF7 (Prop_muxf7_I0_O)      0.212     8.720 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__9_i_11/O
+                         net (fo=2, routed)           0.452     9.172    aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_5
+    SLICE_X45Y54         LUT6 (Prop_lut6_I1_O)        0.299     9.471 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_7/O
+                         net (fo=4, routed)           1.270    10.741    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_0
+    SLICE_X44Y51         LUT4 (Prop_lut4_I1_O)        0.124    10.865 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1/O
+                         net (fo=32, routed)          1.676    12.541    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1_n_0
+    SLICE_X38Y53         LUT6 (Prop_lut6_I0_O)        0.124    12.665 r  aes/AES_rounds/r0/bs/sbox1/g0_b7__10/O
+                         net (fo=1, routed)           0.694    13.359    aes/AES_rounds/r1/bs/sbox10/g0_b0__31_i_7_1
+    SLICE_X38Y53         LUT6 (Prop_lut6_I1_O)        0.124    13.483 r  aes/AES_rounds/r1/bs/sbox10/g0_b0__30_i_10/O
+                         net (fo=5, routed)           1.016    14.499    aes/AES_rounds/r0/bs/sbox1/sbox_out_15[23]
+    SLICE_X32Y53         LUT2 (Prop_lut2_I0_O)        0.152    14.651 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7/O
+                         net (fo=4, routed)           0.634    15.286    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7_n_0
+    SLICE_X31Y52         LUT6 (Prop_lut6_I5_O)        0.326    15.612 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2/O
+                         net (fo=32, routed)          1.620    17.231    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2_n_0
+    SLICE_X30Y55         LUT6 (Prop_lut6_I1_O)        0.124    17.355 r  aes/AES_rounds/r0/bs/sbox1/g1_b7__31/O
+                         net (fo=1, routed)           0.858    18.214    aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_1
+    SLICE_X30Y55         LUT6 (Prop_lut6_I0_O)        0.124    18.338 r  aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_10/O
+                         net (fo=11, routed)          1.782    20.119    aes/AES_rounds/r0/bs/sbox1/sbox_out_14[26]
+    SLICE_X19Y47         LUT6 (Prop_lut6_I3_O)        0.124    20.243 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2/O
+                         net (fo=32, routed)          1.555    21.798    aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2_n_0
+    SLICE_X20Y44         LUT6 (Prop_lut6_I1_O)        0.124    21.922 r  aes/AES_rounds/r0/bs/sbox1/g0_b1__44/O
+                         net (fo=1, routed)           0.000    21.922    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19_3
+    SLICE_X20Y44         MUXF7 (Prop_muxf7_I1_O)      0.245    22.167 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56/O
+                         net (fo=1, routed)           0.000    22.167    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56_n_0
+    SLICE_X20Y44         MUXF8 (Prop_muxf8_I0_O)      0.104    22.271 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19/O
+                         net (fo=5, routed)           1.024    23.294    aes/AES_rounds/r0/bs/sbox0/sbox_out_13[17]
+    SLICE_X22Y38         LUT5 (Prop_lut5_I4_O)        0.316    23.610 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__56_i_3/O
+                         net (fo=32, routed)          1.961    25.572    aes/AES_rounds/r0/bs/sbox0/r4_out[66]
+    SLICE_X13Y34         LUT6 (Prop_lut6_I2_O)        0.124    25.696 r  aes/AES_rounds/r0/bs/sbox0/g2_b7__56/O
+                         net (fo=1, routed)           0.811    26.507    aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_5_1
+    SLICE_X13Y35         LUT6 (Prop_lut6_I1_O)        0.124    26.631 r  aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_9/O
+                         net (fo=8, routed)           1.265    27.896    aes/AES_rounds/r0/bs/sbox5/sbox_out_12[10]
+    SLICE_X13Y29         LUT2 (Prop_lut2_I1_O)        0.152    28.048 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__69_i_7/O
+                         net (fo=4, routed)           0.641    28.689    aes/AES_rounds/r0/bs/sbox0/g3_b7__69_0
+    SLICE_X12Y30         LUT4 (Prop_lut4_I1_O)        0.332    29.021 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_5/O
+                         net (fo=32, routed)          1.645    30.666    aes/AES_rounds/r0/bs/sbox0/r5_out[44]
+    SLICE_X15Y22         LUT6 (Prop_lut6_I4_O)        0.124    30.790 r  aes/AES_rounds/r0/bs/sbox0/g1_b1__69/O
+                         net (fo=1, routed)           0.000    30.790    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14_1
+    SLICE_X15Y22         MUXF7 (Prop_muxf7_I1_O)      0.217    31.007 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49/O
+                         net (fo=1, routed)           0.000    31.007    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49_n_0
+    SLICE_X15Y22         MUXF8 (Prop_muxf8_I1_O)      0.094    31.101 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14/O
+                         net (fo=3, routed)           1.640    32.742    aes/AES_rounds/r0/bs/sbox11/sbox_out_11[9]
+    SLICE_X26Y19         LUT2 (Prop_lut2_I1_O)        0.341    33.083 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__93_i_8/O
+                         net (fo=3, routed)           0.481    33.563    aes/AES_rounds/r0/bs/sbox9/g3_b7__94
+    SLICE_X26Y19         LUT6 (Prop_lut6_I5_O)        0.332    33.895 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__94_i_2/O
+                         net (fo=32, routed)          1.517    35.412    aes/AES_rounds/r0/bs/sbox0/g0_b0__98_i_11[0]
+    SLICE_X33Y19         LUT6 (Prop_lut6_I1_O)        0.124    35.536 r  aes/AES_rounds/r0/bs/sbox0/g1_b3__94/O
+                         net (fo=1, routed)           0.000    35.536    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9_1
+    SLICE_X33Y19         MUXF7 (Prop_muxf7_I1_O)      0.245    35.781 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14/O
+                         net (fo=1, routed)           0.000    35.781    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14_n_0
+    SLICE_X33Y19         MUXF8 (Prop_muxf8_I0_O)      0.104    35.885 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9/O
+                         net (fo=3, routed)           1.118    37.003    aes/AES_rounds/r0/bs/sbox0/sbox_out_10[27]
+    SLICE_X40Y25         LUT2 (Prop_lut2_I0_O)        0.316    37.319 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__96_i_22/O
+                         net (fo=3, routed)           0.674    37.993    aes/AES_rounds/r0/bs/sbox10/g3_b7__96
+    SLICE_X42Y23         LUT6 (Prop_lut6_I4_O)        0.124    38.117 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__97_i_4/O
+                         net (fo=32, routed)          1.852    39.968    aes/AES_rounds/r0/bs/sbox10/r7_out[11]
+    SLICE_X61Y20         LUT6 (Prop_lut6_I3_O)        0.124    40.092 r  aes/AES_rounds/r0/bs/sbox10/g0_b7__97/O
+                         net (fo=1, routed)           0.881    40.974    aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_1
+    SLICE_X60Y20         LUT6 (Prop_lut6_I0_O)        0.124    41.098 r  aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_8/O
+                         net (fo=8, routed)           1.039    42.137    aes/AES_rounds/r0/bs/sbox10/sbox_out_9[6]
+    SLICE_X57Y24         LUT2 (Prop_lut2_I0_O)        0.124    42.261 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__121_i_7/O
+                         net (fo=4, routed)           0.514    42.776    aes/AES_rounds/r0/bs/sbox9/g3_b7__121_0
+    SLICE_X56Y24         LUT6 (Prop_lut6_I5_O)        0.124    42.900 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__121_i_4/O
+                         net (fo=32, routed)          1.645    44.544    aes/AES_rounds/r0/bs/sbox9/r8_out[75]
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    44.668 r  aes/AES_rounds/r0/bs/sbox9/g0_b7__121/O
+                         net (fo=1, routed)           0.670    45.339    aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_5_1
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    45.463 r  aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_8/O
+                         net (fo=8, routed)           1.727    47.190    aes/AES_rounds/r0/bs/sbox9/sbox_out_8[16]
+    SLICE_X57Y35         LUT2 (Prop_lut2_I0_O)        0.150    47.340 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__129_i_7/O
+                         net (fo=4, routed)           0.471    47.811    aes/AES_rounds/r0/bs/sbox4/g3_b7__129_0
+    SLICE_X56Y34         LUT6 (Prop_lut6_I5_O)        0.326    48.137 r  aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_4/O
+                         net (fo=32, routed)          1.671    49.807    aes/AES_rounds/r0/bs/sbox4/r9_out[11]
+    SLICE_X46Y39         LUT6 (Prop_lut6_I3_O)        0.124    49.931 f  aes/AES_rounds/r0/bs/sbox4/g1_b3__129/O
+                         net (fo=1, routed)           0.689    50.621    aes/AES_rounds/r9/bs/sbox1/aes_temp_out_reg[75]_P
+    SLICE_X46Y39         LUT6 (Prop_lut6_I0_O)        0.124    50.745 f  aes/AES_rounds/r9/bs/sbox1/aes_temp_out[75]_P_i_2/O
+                         net (fo=1, routed)           0.940    51.684    aes/AES_rounds/r0/bs/sbox4/sbox_out[1]
+    SLICE_X47Y45         LUT6 (Prop_lut6_I3_O)        0.124    51.808 r  aes/AES_rounds/r0/bs/sbox4/aes_temp_out[75]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.808    aes_n_94
+    SLICE_X47Y45         FDRE                                         r  aes_temp_out_reg[75]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.678   105.100    clk_IBUF_BUFG
+    SLICE_X47Y45         FDRE                                         r  aes_temp_out_reg[75]_P/C
+                         clock pessimism              0.187   105.287    
+                         clock uncertainty           -0.035   105.252    
+    SLICE_X47Y45         FDRE (Setup_fdre_C_D)        0.032   105.284    aes_temp_out_reg[75]_P
+  -------------------------------------------------------------------
+                         required time                        105.284    
+                         arrival time                         -51.808    
+  -------------------------------------------------------------------
+                         slack                                 53.476    
+
+Slack (MET) :             53.494ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[73]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.607ns  (logic 7.509ns (16.111%)  route 39.098ns (83.889%))
+  Logic Levels:           40  (LUT2=6 LUT4=3 LUT5=1 LUT6=23 MUXF7=4 MUXF8=3)
+  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.100ns = ( 105.100 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.233ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.630     5.233    clk_IBUF_BUFG
+    SLICE_X58Y54         FDCE                                         r  aes_data_in_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y54         FDCE (Prop_fdce_C_Q)         0.518     5.751 r  aes_data_in_reg[9]/Q
+                         net (fo=34, routed)          2.633     8.384    aes/AES_rounds/r9/bs/sbox0/g0_b0__8_i_37[1]
+    SLICE_X45Y54         LUT6 (Prop_lut6_I0_O)        0.124     8.508 r  aes/AES_rounds/r9/bs/sbox0/g0_b7__157/O
+                         net (fo=2, routed)           0.000     8.508    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_7_0
+    SLICE_X45Y54         MUXF7 (Prop_muxf7_I0_O)      0.212     8.720 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__9_i_11/O
+                         net (fo=2, routed)           0.452     9.172    aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_5
+    SLICE_X45Y54         LUT6 (Prop_lut6_I1_O)        0.299     9.471 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_7/O
+                         net (fo=4, routed)           1.270    10.741    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_0
+    SLICE_X44Y51         LUT4 (Prop_lut4_I1_O)        0.124    10.865 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1/O
+                         net (fo=32, routed)          1.676    12.541    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1_n_0
+    SLICE_X38Y53         LUT6 (Prop_lut6_I0_O)        0.124    12.665 r  aes/AES_rounds/r0/bs/sbox1/g0_b7__10/O
+                         net (fo=1, routed)           0.694    13.359    aes/AES_rounds/r1/bs/sbox10/g0_b0__31_i_7_1
+    SLICE_X38Y53         LUT6 (Prop_lut6_I1_O)        0.124    13.483 r  aes/AES_rounds/r1/bs/sbox10/g0_b0__30_i_10/O
+                         net (fo=5, routed)           1.016    14.499    aes/AES_rounds/r0/bs/sbox1/sbox_out_15[23]
+    SLICE_X32Y53         LUT2 (Prop_lut2_I0_O)        0.152    14.651 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7/O
+                         net (fo=4, routed)           0.634    15.286    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7_n_0
+    SLICE_X31Y52         LUT6 (Prop_lut6_I5_O)        0.326    15.612 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2/O
+                         net (fo=32, routed)          1.620    17.231    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2_n_0
+    SLICE_X30Y55         LUT6 (Prop_lut6_I1_O)        0.124    17.355 r  aes/AES_rounds/r0/bs/sbox1/g1_b7__31/O
+                         net (fo=1, routed)           0.858    18.214    aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_1
+    SLICE_X30Y55         LUT6 (Prop_lut6_I0_O)        0.124    18.338 r  aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_10/O
+                         net (fo=11, routed)          1.782    20.119    aes/AES_rounds/r0/bs/sbox1/sbox_out_14[26]
+    SLICE_X19Y47         LUT6 (Prop_lut6_I3_O)        0.124    20.243 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2/O
+                         net (fo=32, routed)          1.555    21.798    aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2_n_0
+    SLICE_X20Y44         LUT6 (Prop_lut6_I1_O)        0.124    21.922 r  aes/AES_rounds/r0/bs/sbox1/g0_b1__44/O
+                         net (fo=1, routed)           0.000    21.922    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19_3
+    SLICE_X20Y44         MUXF7 (Prop_muxf7_I1_O)      0.245    22.167 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56/O
+                         net (fo=1, routed)           0.000    22.167    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56_n_0
+    SLICE_X20Y44         MUXF8 (Prop_muxf8_I0_O)      0.104    22.271 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19/O
+                         net (fo=5, routed)           1.024    23.294    aes/AES_rounds/r0/bs/sbox0/sbox_out_13[17]
+    SLICE_X22Y38         LUT5 (Prop_lut5_I4_O)        0.316    23.610 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__56_i_3/O
+                         net (fo=32, routed)          1.961    25.572    aes/AES_rounds/r0/bs/sbox0/r4_out[66]
+    SLICE_X13Y34         LUT6 (Prop_lut6_I2_O)        0.124    25.696 r  aes/AES_rounds/r0/bs/sbox0/g2_b7__56/O
+                         net (fo=1, routed)           0.811    26.507    aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_5_1
+    SLICE_X13Y35         LUT6 (Prop_lut6_I1_O)        0.124    26.631 r  aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_9/O
+                         net (fo=8, routed)           1.265    27.896    aes/AES_rounds/r0/bs/sbox5/sbox_out_12[10]
+    SLICE_X13Y29         LUT2 (Prop_lut2_I1_O)        0.152    28.048 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__69_i_7/O
+                         net (fo=4, routed)           0.641    28.689    aes/AES_rounds/r0/bs/sbox0/g3_b7__69_0
+    SLICE_X12Y30         LUT4 (Prop_lut4_I1_O)        0.332    29.021 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_5/O
+                         net (fo=32, routed)          1.645    30.666    aes/AES_rounds/r0/bs/sbox0/r5_out[44]
+    SLICE_X15Y22         LUT6 (Prop_lut6_I4_O)        0.124    30.790 r  aes/AES_rounds/r0/bs/sbox0/g1_b1__69/O
+                         net (fo=1, routed)           0.000    30.790    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14_1
+    SLICE_X15Y22         MUXF7 (Prop_muxf7_I1_O)      0.217    31.007 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49/O
+                         net (fo=1, routed)           0.000    31.007    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49_n_0
+    SLICE_X15Y22         MUXF8 (Prop_muxf8_I1_O)      0.094    31.101 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14/O
+                         net (fo=3, routed)           1.640    32.742    aes/AES_rounds/r0/bs/sbox11/sbox_out_11[9]
+    SLICE_X26Y19         LUT2 (Prop_lut2_I1_O)        0.341    33.083 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__93_i_8/O
+                         net (fo=3, routed)           0.481    33.563    aes/AES_rounds/r0/bs/sbox9/g3_b7__94
+    SLICE_X26Y19         LUT6 (Prop_lut6_I5_O)        0.332    33.895 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__94_i_2/O
+                         net (fo=32, routed)          1.517    35.412    aes/AES_rounds/r0/bs/sbox0/g0_b0__98_i_11[0]
+    SLICE_X33Y19         LUT6 (Prop_lut6_I1_O)        0.124    35.536 r  aes/AES_rounds/r0/bs/sbox0/g1_b3__94/O
+                         net (fo=1, routed)           0.000    35.536    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9_1
+    SLICE_X33Y19         MUXF7 (Prop_muxf7_I1_O)      0.245    35.781 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14/O
+                         net (fo=1, routed)           0.000    35.781    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14_n_0
+    SLICE_X33Y19         MUXF8 (Prop_muxf8_I0_O)      0.104    35.885 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9/O
+                         net (fo=3, routed)           1.118    37.003    aes/AES_rounds/r0/bs/sbox0/sbox_out_10[27]
+    SLICE_X40Y25         LUT2 (Prop_lut2_I0_O)        0.316    37.319 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__96_i_22/O
+                         net (fo=3, routed)           0.674    37.993    aes/AES_rounds/r0/bs/sbox10/g3_b7__96
+    SLICE_X42Y23         LUT6 (Prop_lut6_I4_O)        0.124    38.117 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__97_i_4/O
+                         net (fo=32, routed)          1.852    39.968    aes/AES_rounds/r0/bs/sbox10/r7_out[11]
+    SLICE_X61Y20         LUT6 (Prop_lut6_I3_O)        0.124    40.092 r  aes/AES_rounds/r0/bs/sbox10/g0_b7__97/O
+                         net (fo=1, routed)           0.881    40.974    aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_1
+    SLICE_X60Y20         LUT6 (Prop_lut6_I0_O)        0.124    41.098 r  aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_8/O
+                         net (fo=8, routed)           1.039    42.137    aes/AES_rounds/r0/bs/sbox10/sbox_out_9[6]
+    SLICE_X57Y24         LUT2 (Prop_lut2_I0_O)        0.124    42.261 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__121_i_7/O
+                         net (fo=4, routed)           0.514    42.776    aes/AES_rounds/r0/bs/sbox9/g3_b7__121_0
+    SLICE_X56Y24         LUT6 (Prop_lut6_I5_O)        0.124    42.900 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__121_i_4/O
+                         net (fo=32, routed)          1.645    44.544    aes/AES_rounds/r0/bs/sbox9/r8_out[75]
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    44.668 r  aes/AES_rounds/r0/bs/sbox9/g0_b7__121/O
+                         net (fo=1, routed)           0.670    45.339    aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_5_1
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    45.463 r  aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_8/O
+                         net (fo=8, routed)           1.727    47.190    aes/AES_rounds/r0/bs/sbox9/sbox_out_8[16]
+    SLICE_X57Y35         LUT2 (Prop_lut2_I0_O)        0.150    47.340 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__129_i_7/O
+                         net (fo=4, routed)           0.332    47.672    aes/AES_rounds/r0/bs/sbox4/g3_b7__129_0
+    SLICE_X55Y35         LUT4 (Prop_lut4_I3_O)        0.326    47.998 r  aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_1/O
+                         net (fo=32, routed)          1.933    49.931    aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_1_n_0
+    SLICE_X44Y39         LUT6 (Prop_lut6_I0_O)        0.124    50.055 f  aes/AES_rounds/r0/bs/sbox4/g0_b1__129/O
+                         net (fo=1, routed)           0.868    50.923    aes/AES_rounds/r9/bs/sbox1/aes_temp_out_reg[73]_P_0
+    SLICE_X45Y39         LUT6 (Prop_lut6_I1_O)        0.124    51.047 f  aes/AES_rounds/r9/bs/sbox1/aes_temp_out[73]_P_i_2/O
+                         net (fo=1, routed)           0.668    51.715    aes/AES_rounds/r0/bs/sbox4/sbox_out[0]
+    SLICE_X46Y45         LUT6 (Prop_lut6_I3_O)        0.124    51.839 r  aes/AES_rounds/r0/bs/sbox4/aes_temp_out[73]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.839    aes_n_92
+    SLICE_X46Y45         FDRE                                         r  aes_temp_out_reg[73]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.678   105.100    clk_IBUF_BUFG
+    SLICE_X46Y45         FDRE                                         r  aes_temp_out_reg[73]_P/C
+                         clock pessimism              0.187   105.287    
+                         clock uncertainty           -0.035   105.252    
+    SLICE_X46Y45         FDRE (Setup_fdre_C_D)        0.081   105.333    aes_temp_out_reg[73]_P
+  -------------------------------------------------------------------
+                         required time                        105.333    
+                         arrival time                         -51.839    
+  -------------------------------------------------------------------
+                         slack                                 53.494    
+
+Slack (MET) :             53.550ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[93]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.502ns  (logic 8.027ns (17.262%)  route 38.475ns (82.738%))
+  Logic Levels:           42  (LUT2=7 LUT4=3 LUT6=24 MUXF7=4 MUXF8=4)
+  Clock Path Skew:        0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.097ns = ( 105.097 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.229ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.626     5.229    clk_IBUF_BUFG
+    SLICE_X55Y51         FDCE                                         r  aes_data_in_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y51         FDCE (Prop_fdce_C_Q)         0.456     5.685 r  aes_data_in_reg[18]/Q
+                         net (fo=34, routed)          2.205     7.889    aes/AES_rounds/r9/bs/sbox6/g0_b0__7_i_9[2]
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.013 r  aes/AES_rounds/r9/bs/sbox6/g2_b7__156/O
+                         net (fo=1, routed)           0.853     8.866    aes/AES_rounds/r0/bs/sbox2/g0_b0__16_i_38_0
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.990 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__6_i_10/O
+                         net (fo=5, routed)           0.659     9.649    aes/AES_rounds/r0/bs/sbox2/aes_data_in_reg[23][7]
+    SLICE_X38Y48         LUT6 (Prop_lut6_I0_O)        0.124     9.773 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7/O
+                         net (fo=4, routed)           1.035    10.808    aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7_n_0
+    SLICE_X36Y48         LUT4 (Prop_lut4_I1_O)        0.124    10.932 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_1/O
+                         net (fo=32, routed)          1.867    12.798    aes/AES_rounds/r0/bs/sbox2/r1_out[56]
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.922 r  aes/AES_rounds/r0/bs/sbox2/g0_b7__7/O
+                         net (fo=1, routed)           0.689    13.612    aes/AES_rounds/r1/bs/sbox7/g0_b0__40_i_32
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    13.736 r  aes/AES_rounds/r1/bs/sbox7/g0_b0__20_i_41/O
+                         net (fo=5, routed)           0.957    14.693    aes/AES_rounds/r0/bs/sbox9/sbox_out_15[15]
+    SLICE_X31Y48         LUT2 (Prop_lut2_I1_O)        0.152    14.845 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7/O
+                         net (fo=4, routed)           0.405    15.250    aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7_n_0
+    SLICE_X30Y48         LUT4 (Prop_lut4_I3_O)        0.326    15.576 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_1/O
+                         net (fo=32, routed)          1.685    17.261    aes/AES_rounds/r0/bs/sbox9/r2_out[56]
+    SLICE_X23Y45         LUT6 (Prop_lut6_I0_O)        0.124    17.385 r  aes/AES_rounds/r0/bs/sbox9/g3_b3__23/O
+                         net (fo=1, routed)           0.000    17.385    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22_3
+    SLICE_X23Y45         MUXF7 (Prop_muxf7_I1_O)      0.245    17.630 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53/O
+                         net (fo=1, routed)           0.000    17.630    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53_n_0
+    SLICE_X23Y45         MUXF8 (Prop_muxf8_I0_O)      0.104    17.734 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22/O
+                         net (fo=3, routed)           0.682    18.416    aes/AES_rounds/r0/bs/sbox12/sbox_out_14[11]
+    SLICE_X24Y44         LUT2 (Prop_lut2_I1_O)        0.341    18.757 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__36_i_20/O
+                         net (fo=3, routed)           0.468    19.225    aes/AES_rounds/r0/bs/sbox6/g0_b0__36
+    SLICE_X24Y44         LUT6 (Prop_lut6_I4_O)        0.332    19.557 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4/O
+                         net (fo=32, routed)          1.628    21.185    aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I3_O)        0.124    21.309 r  aes/AES_rounds/r0/bs/sbox6/g0_b7__37/O
+                         net (fo=1, routed)           0.689    21.999    aes/AES_rounds/r3/bs/sbox5/g0_b0__72_i_41_3
+    SLICE_X12Y43         LUT6 (Prop_lut6_I5_O)        0.124    22.123 r  aes/AES_rounds/r3/bs/sbox5/g0_b0__62_i_8/O
+                         net (fo=8, routed)           1.330    23.453    aes/AES_rounds/r0/bs/sbox6/sbox_out_13[9]
+    SLICE_X13Y38         LUT2 (Prop_lut2_I0_O)        0.152    23.605 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__61_i_7/O
+                         net (fo=4, routed)           0.689    24.295    aes/AES_rounds/r0/bs/sbox5/g3_b7__61_0
+    SLICE_X14Y39         LUT6 (Prop_lut6_I5_O)        0.332    24.627 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__61_i_4/O
+                         net (fo=32, routed)          2.012    26.639    aes/AES_rounds/r0/bs/sbox5/r4_out[107]
+    SLICE_X13Y32         LUT6 (Prop_lut6_I3_O)        0.124    26.763 r  aes/AES_rounds/r0/bs/sbox5/g2_b1__61/O
+                         net (fo=1, routed)           0.000    26.763    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14_1
+    SLICE_X13Y32         MUXF7 (Prop_muxf7_I1_O)      0.245    27.008 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48/O
+                         net (fo=1, routed)           0.000    27.008    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48_n_0
+    SLICE_X13Y32         MUXF8 (Prop_muxf8_I0_O)      0.104    27.112 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14/O
+                         net (fo=3, routed)           0.822    27.934    aes/AES_rounds/r0/bs/sbox0/sbox_out_12[22]
+    SLICE_X13Y31         LUT2 (Prop_lut2_I1_O)        0.344    28.278 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_9/O
+                         net (fo=3, routed)           0.835    29.112    aes/AES_rounds/r0/bs/sbox10/g0_b0__70
+    SLICE_X12Y29         LUT6 (Prop_lut6_I5_O)        0.332    29.444 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__70_i_2/O
+                         net (fo=32, routed)          1.694    31.138    aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_34
+    SLICE_X15Y15         LUT6 (Prop_lut6_I1_O)        0.124    31.262 r  aes/AES_rounds/r0/bs/sbox5/g2_b4__70/O
+                         net (fo=1, routed)           0.000    31.262    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9_1
+    SLICE_X15Y15         MUXF7 (Prop_muxf7_I1_O)      0.245    31.507 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10/O
+                         net (fo=1, routed)           0.000    31.507    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10_n_0
+    SLICE_X15Y15         MUXF8 (Prop_muxf8_I0_O)      0.104    31.611 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9/O
+                         net (fo=3, routed)           1.326    32.938    aes/AES_rounds/r0/bs/sbox5/sbox_out_11[10]
+    SLICE_X22Y14         LUT2 (Prop_lut2_I0_O)        0.316    33.254 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_25/O
+                         net (fo=3, routed)           0.430    33.684    aes/AES_rounds/r0/bs/sbox7/g0_b0__88
+    SLICE_X23Y14         LUT6 (Prop_lut6_I4_O)        0.124    33.808 r  aes/AES_rounds/r0/bs/sbox7/g0_b0__88_i_5/O
+                         net (fo=32, routed)          1.462    35.270    aes/AES_rounds/r0/bs/sbox14/g0_b0__101_i_15
+    SLICE_X36Y17         LUT6 (Prop_lut6_I4_O)        0.124    35.394 r  aes/AES_rounds/r0/bs/sbox14/g2_b2__88/O
+                         net (fo=1, routed)           0.000    35.394    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10_2
+    SLICE_X36Y17         MUXF7 (Prop_muxf7_I0_O)      0.238    35.632 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16/O
+                         net (fo=1, routed)           0.000    35.632    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16_n_0
+    SLICE_X36Y17         MUXF8 (Prop_muxf8_I0_O)      0.104    35.736 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10/O
+                         net (fo=3, routed)           1.578    37.314    aes/AES_rounds/r0/bs/sbox14/sbox_out_10[15]
+    SLICE_X44Y22         LUT2 (Prop_lut2_I0_O)        0.316    37.630 r  aes/AES_rounds/r0/bs/sbox14/g0_b0__100_i_23/O
+                         net (fo=3, routed)           0.436    38.066    aes/AES_rounds/r0/bs/sbox11/g0_b0__102_1
+    SLICE_X44Y20         LUT4 (Prop_lut4_I3_O)        0.124    38.190 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__102_i_3/O
+                         net (fo=32, routed)          2.218    40.408    aes/AES_rounds/r0/bs/sbox11/r7_out[50]
+    SLICE_X59Y22         LUT6 (Prop_lut6_I2_O)        0.124    40.532 r  aes/AES_rounds/r0/bs/sbox11/g2_b7__102/O
+                         net (fo=1, routed)           0.881    41.414    aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_1_1
+    SLICE_X58Y22         LUT6 (Prop_lut6_I1_O)        0.124    41.538 r  aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_7/O
+                         net (fo=11, routed)          1.368    42.906    aes/AES_rounds/r0/bs/sbox11/sbox_out_9[13]
+    SLICE_X55Y26         LUT6 (Prop_lut6_I0_O)        0.124    43.030 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__123_i_2/O
+                         net (fo=32, routed)          1.816    44.845    aes/AES_rounds/r0/bs/sbox11/r8_out[89]
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    44.969 r  aes/AES_rounds/r0/bs/sbox11/g0_b7__123/O
+                         net (fo=1, routed)           0.670    45.640    aes/AES_rounds/r8/bs/sbox11/aes_temp_out[119]_P_i_3_1
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    45.764 r  aes/AES_rounds/r8/bs/sbox11/g0_b0__136_i_10/O
+                         net (fo=8, routed)           1.076    46.840    aes/AES_rounds/r0/bs/sbox6/sbox_out_8[23]
+    SLICE_X66Y35         LUT2 (Prop_lut2_I1_O)        0.156    46.996 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7/O
+                         net (fo=4, routed)           0.460    47.456    aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7_n_0
+    SLICE_X66Y36         LUT6 (Prop_lut6_I5_O)        0.355    47.811 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_4/O
+                         net (fo=32, routed)          1.525    49.336    aes/AES_rounds/r0/bs/sbox6/r9_out[91]
+    SLICE_X68Y40         LUT6 (Prop_lut6_I3_O)        0.124    49.460 f  aes/AES_rounds/r0/bs/sbox6/g3_b5__139/O
+                         net (fo=1, routed)           0.425    49.886    aes/AES_rounds/r9/bs/sbox11/aes_temp_out_reg[93]_P_2
+    SLICE_X68Y39         LUT6 (Prop_lut6_I5_O)        0.124    50.010 f  aes/AES_rounds/r9/bs/sbox11/aes_temp_out[93]_P_i_2/O
+                         net (fo=1, routed)           1.597    51.607    aes/AES_rounds/r0/bs/sbox6/sbox_out[2]
+    SLICE_X59Y49         LUT6 (Prop_lut6_I3_O)        0.124    51.731 r  aes/AES_rounds/r0/bs/sbox6/aes_temp_out[93]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.731    aes_n_29
+    SLICE_X59Y49         FDRE                                         r  aes_temp_out_reg[93]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.675   105.097    clk_IBUF_BUFG
+    SLICE_X59Y49         FDRE                                         r  aes_temp_out_reg[93]_P/C
+                         clock pessimism              0.187   105.284    
+                         clock uncertainty           -0.035   105.249    
+    SLICE_X59Y49         FDRE (Setup_fdre_C_D)        0.032   105.281    aes_temp_out_reg[93]_P
+  -------------------------------------------------------------------
+                         required time                        105.281    
+                         arrival time                         -51.731    
+  -------------------------------------------------------------------
+                         slack                                 53.550    
+
+Slack (MET) :             53.607ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[72]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.443ns  (logic 7.509ns (16.168%)  route 38.934ns (83.832%))
+  Logic Levels:           40  (LUT2=6 LUT4=2 LUT5=1 LUT6=24 MUXF7=4 MUXF8=3)
+  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.100ns = ( 105.100 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.233ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.630     5.233    clk_IBUF_BUFG
+    SLICE_X58Y54         FDCE                                         r  aes_data_in_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y54         FDCE (Prop_fdce_C_Q)         0.518     5.751 r  aes_data_in_reg[9]/Q
+                         net (fo=34, routed)          2.633     8.384    aes/AES_rounds/r9/bs/sbox0/g0_b0__8_i_37[1]
+    SLICE_X45Y54         LUT6 (Prop_lut6_I0_O)        0.124     8.508 r  aes/AES_rounds/r9/bs/sbox0/g0_b7__157/O
+                         net (fo=2, routed)           0.000     8.508    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_7_0
+    SLICE_X45Y54         MUXF7 (Prop_muxf7_I0_O)      0.212     8.720 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__9_i_11/O
+                         net (fo=2, routed)           0.452     9.172    aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_5
+    SLICE_X45Y54         LUT6 (Prop_lut6_I1_O)        0.299     9.471 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__10_i_7/O
+                         net (fo=4, routed)           1.270    10.741    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_0
+    SLICE_X44Y51         LUT4 (Prop_lut4_I1_O)        0.124    10.865 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1/O
+                         net (fo=32, routed)          1.676    12.541    aes/AES_rounds/r0/bs/sbox1/g0_b0__10_i_1_n_0
+    SLICE_X38Y53         LUT6 (Prop_lut6_I0_O)        0.124    12.665 r  aes/AES_rounds/r0/bs/sbox1/g0_b7__10/O
+                         net (fo=1, routed)           0.694    13.359    aes/AES_rounds/r1/bs/sbox10/g0_b0__31_i_7_1
+    SLICE_X38Y53         LUT6 (Prop_lut6_I1_O)        0.124    13.483 r  aes/AES_rounds/r1/bs/sbox10/g0_b0__30_i_10/O
+                         net (fo=5, routed)           1.016    14.499    aes/AES_rounds/r0/bs/sbox1/sbox_out_15[23]
+    SLICE_X32Y53         LUT2 (Prop_lut2_I0_O)        0.152    14.651 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7/O
+                         net (fo=4, routed)           0.634    15.286    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_7_n_0
+    SLICE_X31Y52         LUT6 (Prop_lut6_I5_O)        0.326    15.612 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2/O
+                         net (fo=32, routed)          1.620    17.231    aes/AES_rounds/r0/bs/sbox1/g0_b0__31_i_2_n_0
+    SLICE_X30Y55         LUT6 (Prop_lut6_I1_O)        0.124    17.355 r  aes/AES_rounds/r0/bs/sbox1/g1_b7__31/O
+                         net (fo=1, routed)           0.858    18.214    aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_1
+    SLICE_X30Y55         LUT6 (Prop_lut6_I0_O)        0.124    18.338 r  aes/AES_rounds/r2/bs/sbox15/g0_b0__44_i_10/O
+                         net (fo=11, routed)          1.782    20.119    aes/AES_rounds/r0/bs/sbox1/sbox_out_14[26]
+    SLICE_X19Y47         LUT6 (Prop_lut6_I3_O)        0.124    20.243 r  aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2/O
+                         net (fo=32, routed)          1.555    21.798    aes/AES_rounds/r0/bs/sbox1/g0_b0__44_i_2_n_0
+    SLICE_X20Y44         LUT6 (Prop_lut6_I1_O)        0.124    21.922 r  aes/AES_rounds/r0/bs/sbox1/g0_b1__44/O
+                         net (fo=1, routed)           0.000    21.922    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19_3
+    SLICE_X20Y44         MUXF7 (Prop_muxf7_I1_O)      0.245    22.167 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56/O
+                         net (fo=1, routed)           0.000    22.167    aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_56_n_0
+    SLICE_X20Y44         MUXF8 (Prop_muxf8_I0_O)      0.104    22.271 r  aes/AES_rounds/r3/bs/sbox12/g0_b0__56_i_19/O
+                         net (fo=5, routed)           1.024    23.294    aes/AES_rounds/r0/bs/sbox0/sbox_out_13[17]
+    SLICE_X22Y38         LUT5 (Prop_lut5_I4_O)        0.316    23.610 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__56_i_3/O
+                         net (fo=32, routed)          1.961    25.572    aes/AES_rounds/r0/bs/sbox0/r4_out[66]
+    SLICE_X13Y34         LUT6 (Prop_lut6_I2_O)        0.124    25.696 r  aes/AES_rounds/r0/bs/sbox0/g2_b7__56/O
+                         net (fo=1, routed)           0.811    26.507    aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_5_1
+    SLICE_X13Y35         LUT6 (Prop_lut6_I1_O)        0.124    26.631 r  aes/AES_rounds/r4/bs/sbox8/g0_b0__68_i_9/O
+                         net (fo=8, routed)           1.265    27.896    aes/AES_rounds/r0/bs/sbox5/sbox_out_12[10]
+    SLICE_X13Y29         LUT2 (Prop_lut2_I1_O)        0.152    28.048 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__69_i_7/O
+                         net (fo=4, routed)           0.641    28.689    aes/AES_rounds/r0/bs/sbox0/g3_b7__69_0
+    SLICE_X12Y30         LUT4 (Prop_lut4_I1_O)        0.332    29.021 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_5/O
+                         net (fo=32, routed)          1.645    30.666    aes/AES_rounds/r0/bs/sbox0/r5_out[44]
+    SLICE_X15Y22         LUT6 (Prop_lut6_I4_O)        0.124    30.790 r  aes/AES_rounds/r0/bs/sbox0/g1_b1__69/O
+                         net (fo=1, routed)           0.000    30.790    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14_1
+    SLICE_X15Y22         MUXF7 (Prop_muxf7_I1_O)      0.217    31.007 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49/O
+                         net (fo=1, routed)           0.000    31.007    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49_n_0
+    SLICE_X15Y22         MUXF8 (Prop_muxf8_I1_O)      0.094    31.101 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14/O
+                         net (fo=3, routed)           1.640    32.742    aes/AES_rounds/r0/bs/sbox11/sbox_out_11[9]
+    SLICE_X26Y19         LUT2 (Prop_lut2_I1_O)        0.341    33.083 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__93_i_8/O
+                         net (fo=3, routed)           0.481    33.563    aes/AES_rounds/r0/bs/sbox9/g3_b7__94
+    SLICE_X26Y19         LUT6 (Prop_lut6_I5_O)        0.332    33.895 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__94_i_2/O
+                         net (fo=32, routed)          1.517    35.412    aes/AES_rounds/r0/bs/sbox0/g0_b0__98_i_11[0]
+    SLICE_X33Y19         LUT6 (Prop_lut6_I1_O)        0.124    35.536 r  aes/AES_rounds/r0/bs/sbox0/g1_b3__94/O
+                         net (fo=1, routed)           0.000    35.536    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9_1
+    SLICE_X33Y19         MUXF7 (Prop_muxf7_I1_O)      0.245    35.781 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14/O
+                         net (fo=1, routed)           0.000    35.781    aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_14_n_0
+    SLICE_X33Y19         MUXF8 (Prop_muxf8_I0_O)      0.104    35.885 r  aes/AES_rounds/r6/bs/sbox14/g0_b0__98_i_9/O
+                         net (fo=3, routed)           1.118    37.003    aes/AES_rounds/r0/bs/sbox0/sbox_out_10[27]
+    SLICE_X40Y25         LUT2 (Prop_lut2_I0_O)        0.316    37.319 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__96_i_22/O
+                         net (fo=3, routed)           0.674    37.993    aes/AES_rounds/r0/bs/sbox10/g3_b7__96
+    SLICE_X42Y23         LUT6 (Prop_lut6_I4_O)        0.124    38.117 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__97_i_4/O
+                         net (fo=32, routed)          1.852    39.968    aes/AES_rounds/r0/bs/sbox10/r7_out[11]
+    SLICE_X61Y20         LUT6 (Prop_lut6_I3_O)        0.124    40.092 r  aes/AES_rounds/r0/bs/sbox10/g0_b7__97/O
+                         net (fo=1, routed)           0.881    40.974    aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_1
+    SLICE_X60Y20         LUT6 (Prop_lut6_I0_O)        0.124    41.098 r  aes/AES_rounds/r7/bs/sbox1/g0_b0__122_i_8/O
+                         net (fo=8, routed)           1.039    42.137    aes/AES_rounds/r0/bs/sbox10/sbox_out_9[6]
+    SLICE_X57Y24         LUT2 (Prop_lut2_I0_O)        0.124    42.261 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__121_i_7/O
+                         net (fo=4, routed)           0.514    42.776    aes/AES_rounds/r0/bs/sbox9/g3_b7__121_0
+    SLICE_X56Y24         LUT6 (Prop_lut6_I5_O)        0.124    42.900 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__121_i_4/O
+                         net (fo=32, routed)          1.645    44.544    aes/AES_rounds/r0/bs/sbox9/r8_out[75]
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    44.668 r  aes/AES_rounds/r0/bs/sbox9/g0_b7__121/O
+                         net (fo=1, routed)           0.670    45.339    aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_5_1
+    SLICE_X59Y28         LUT6 (Prop_lut6_I3_O)        0.124    45.463 r  aes/AES_rounds/r8/bs/sbox9/g0_b0__130_i_8/O
+                         net (fo=8, routed)           1.727    47.190    aes/AES_rounds/r0/bs/sbox9/sbox_out_8[16]
+    SLICE_X57Y35         LUT2 (Prop_lut2_I0_O)        0.150    47.340 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__129_i_7/O
+                         net (fo=4, routed)           0.609    47.949    aes/AES_rounds/r0/bs/sbox4/g3_b7__129_0
+    SLICE_X55Y35         LUT6 (Prop_lut6_I5_O)        0.326    48.275 r  aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_2/O
+                         net (fo=32, routed)          1.774    50.048    aes/AES_rounds/r0/bs/sbox4/g0_b0__129_i_2_n_0
+    SLICE_X48Y41         LUT6 (Prop_lut6_I1_O)        0.124    50.172 r  aes/AES_rounds/r0/bs/sbox4/g1_b0__129/O
+                         net (fo=1, routed)           0.670    50.843    aes/AES_rounds/r9/bs/sbox1/aes_temp_out_reg[72]_P
+    SLICE_X48Y41         LUT6 (Prop_lut6_I0_O)        0.124    50.967 r  aes/AES_rounds/r9/bs/sbox1/aes_temp_out[72]_P_i_2/O
+                         net (fo=1, routed)           0.585    51.552    aes/AES_rounds/r0/bs/sbox4/r10_out[0]
+    SLICE_X48Y46         LUT6 (Prop_lut6_I3_O)        0.124    51.676 r  aes/AES_rounds/r0/bs/sbox4/aes_temp_out[72]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.676    aes_n_91
+    SLICE_X48Y46         FDRE                                         r  aes_temp_out_reg[72]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.678   105.100    clk_IBUF_BUFG
+    SLICE_X48Y46         FDRE                                         r  aes_temp_out_reg[72]_P/C
+                         clock pessimism              0.187   105.287    
+                         clock uncertainty           -0.035   105.252    
+    SLICE_X48Y46         FDRE (Setup_fdre_C_D)        0.031   105.283    aes_temp_out_reg[72]_P
+  -------------------------------------------------------------------
+                         required time                        105.283    
+                         arrival time                         -51.676    
+  -------------------------------------------------------------------
+                         slack                                 53.607    
+
+Slack (MET) :             53.673ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[122]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.331ns  (logic 7.735ns (16.695%)  route 38.596ns (83.305%))
+  Logic Levels:           41  (LUT2=7 LUT3=1 LUT4=3 LUT6=24 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        -0.037ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.933ns = ( 104.933 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.229ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.626     5.229    clk_IBUF_BUFG
+    SLICE_X55Y51         FDCE                                         r  aes_data_in_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y51         FDCE (Prop_fdce_C_Q)         0.456     5.685 r  aes_data_in_reg[18]/Q
+                         net (fo=34, routed)          2.205     7.889    aes/AES_rounds/r9/bs/sbox6/g0_b0__7_i_9[2]
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.013 r  aes/AES_rounds/r9/bs/sbox6/g2_b7__156/O
+                         net (fo=1, routed)           0.853     8.866    aes/AES_rounds/r0/bs/sbox2/g0_b0__16_i_38_0
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.990 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__6_i_10/O
+                         net (fo=5, routed)           0.659     9.649    aes/AES_rounds/r0/bs/sbox2/aes_data_in_reg[23][7]
+    SLICE_X38Y48         LUT6 (Prop_lut6_I0_O)        0.124     9.773 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7/O
+                         net (fo=4, routed)           1.035    10.808    aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7_n_0
+    SLICE_X36Y48         LUT4 (Prop_lut4_I1_O)        0.124    10.932 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_1/O
+                         net (fo=32, routed)          1.867    12.798    aes/AES_rounds/r0/bs/sbox2/r1_out[56]
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.922 r  aes/AES_rounds/r0/bs/sbox2/g0_b7__7/O
+                         net (fo=1, routed)           0.689    13.612    aes/AES_rounds/r1/bs/sbox7/g0_b0__40_i_32
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    13.736 r  aes/AES_rounds/r1/bs/sbox7/g0_b0__20_i_41/O
+                         net (fo=5, routed)           0.957    14.693    aes/AES_rounds/r0/bs/sbox9/sbox_out_15[15]
+    SLICE_X31Y48         LUT2 (Prop_lut2_I1_O)        0.152    14.845 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7/O
+                         net (fo=4, routed)           0.405    15.250    aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7_n_0
+    SLICE_X30Y48         LUT4 (Prop_lut4_I3_O)        0.326    15.576 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_1/O
+                         net (fo=32, routed)          1.685    17.261    aes/AES_rounds/r0/bs/sbox9/r2_out[56]
+    SLICE_X23Y45         LUT6 (Prop_lut6_I0_O)        0.124    17.385 r  aes/AES_rounds/r0/bs/sbox9/g3_b3__23/O
+                         net (fo=1, routed)           0.000    17.385    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22_3
+    SLICE_X23Y45         MUXF7 (Prop_muxf7_I1_O)      0.245    17.630 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53/O
+                         net (fo=1, routed)           0.000    17.630    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53_n_0
+    SLICE_X23Y45         MUXF8 (Prop_muxf8_I0_O)      0.104    17.734 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22/O
+                         net (fo=3, routed)           0.682    18.416    aes/AES_rounds/r0/bs/sbox12/sbox_out_14[11]
+    SLICE_X24Y44         LUT2 (Prop_lut2_I1_O)        0.341    18.757 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__36_i_20/O
+                         net (fo=3, routed)           0.468    19.225    aes/AES_rounds/r0/bs/sbox6/g0_b0__36
+    SLICE_X24Y44         LUT6 (Prop_lut6_I4_O)        0.332    19.557 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4/O
+                         net (fo=32, routed)          1.628    21.185    aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I3_O)        0.124    21.309 r  aes/AES_rounds/r0/bs/sbox6/g0_b7__37/O
+                         net (fo=1, routed)           0.689    21.999    aes/AES_rounds/r3/bs/sbox5/g0_b0__72_i_41_3
+    SLICE_X12Y43         LUT6 (Prop_lut6_I5_O)        0.124    22.123 r  aes/AES_rounds/r3/bs/sbox5/g0_b0__62_i_8/O
+                         net (fo=8, routed)           1.330    23.453    aes/AES_rounds/r0/bs/sbox6/sbox_out_13[9]
+    SLICE_X13Y38         LUT2 (Prop_lut2_I0_O)        0.152    23.605 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__61_i_7/O
+                         net (fo=4, routed)           0.689    24.295    aes/AES_rounds/r0/bs/sbox5/g3_b7__61_0
+    SLICE_X14Y39         LUT6 (Prop_lut6_I5_O)        0.332    24.627 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__61_i_4/O
+                         net (fo=32, routed)          1.260    25.887    aes/AES_rounds/r0/bs/sbox5/r4_out[107]
+    SLICE_X10Y32         LUT6 (Prop_lut6_I3_O)        0.124    26.011 r  aes/AES_rounds/r0/bs/sbox5/g0_b7__61/O
+                         net (fo=1, routed)           0.689    26.700    aes/AES_rounds/r4/bs/sbox13/g0_b0__70_i_5
+    SLICE_X10Y32         LUT6 (Prop_lut6_I0_O)        0.124    26.824 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__70_i_8/O
+                         net (fo=8, routed)           1.065    27.889    aes/AES_rounds/r0/bs/sbox5/sbox_out_12[17]
+    SLICE_X13Y29         LUT2 (Prop_lut2_I0_O)        0.152    28.041 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__69_i_7/O
+                         net (fo=4, routed)           0.641    28.683    aes/AES_rounds/r0/bs/sbox0/g3_b7__69_0
+    SLICE_X12Y30         LUT4 (Prop_lut4_I1_O)        0.332    29.015 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_5/O
+                         net (fo=32, routed)          1.645    30.660    aes/AES_rounds/r0/bs/sbox0/r5_out[44]
+    SLICE_X15Y22         LUT6 (Prop_lut6_I4_O)        0.124    30.784 r  aes/AES_rounds/r0/bs/sbox0/g1_b1__69/O
+                         net (fo=1, routed)           0.000    30.784    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14_1
+    SLICE_X15Y22         MUXF7 (Prop_muxf7_I1_O)      0.217    31.001 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49/O
+                         net (fo=1, routed)           0.000    31.001    aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_49_n_0
+    SLICE_X15Y22         MUXF8 (Prop_muxf8_I1_O)      0.094    31.095 r  aes/AES_rounds/r5/bs/sbox5/g0_b0__92_i_14/O
+                         net (fo=3, routed)           1.640    32.735    aes/AES_rounds/r0/bs/sbox11/sbox_out_11[9]
+    SLICE_X26Y19         LUT2 (Prop_lut2_I1_O)        0.341    33.076 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__93_i_8/O
+                         net (fo=3, routed)           0.475    33.552    aes/AES_rounds/r0/bs/sbox9/g3_b7__94
+    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.332    33.884 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__95_i_2/O
+                         net (fo=32, routed)          1.774    35.657    aes/AES_rounds/r0/bs/sbox9/g0_b0__95_i_2_n_0
+    SLICE_X43Y17         LUT6 (Prop_lut6_I1_O)        0.124    35.781 r  aes/AES_rounds/r0/bs/sbox9/g1_b7__95/O
+                         net (fo=1, routed)           0.670    36.451    aes/AES_rounds/r6/bs/sbox15/g0_b0__111_i_7_3
+    SLICE_X43Y17         LUT6 (Prop_lut6_I5_O)        0.124    36.575 r  aes/AES_rounds/r6/bs/sbox15/g0_b0__108_i_8/O
+                         net (fo=8, routed)           1.104    37.679    aes/AES_rounds/r0/bs/sbox12/sbox_out_10[31]
+    SLICE_X50Y18         LUT2 (Prop_lut2_I1_O)        0.150    37.829 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__111_i_7/O
+                         net (fo=4, routed)           0.678    38.507    aes/AES_rounds/r0/bs/sbox12/g0_b0__111_i_7_n_0
+    SLICE_X51Y18         LUT6 (Prop_lut6_I5_O)        0.328    38.835 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__111_i_2/O
+                         net (fo=32, routed)          1.957    40.793    aes/AES_rounds/r0/bs/sbox12/r7_out[121]
+    SLICE_X63Y17         LUT6 (Prop_lut6_I1_O)        0.124    40.917 r  aes/AES_rounds/r0/bs/sbox12/g1_b7__111/O
+                         net (fo=1, routed)           0.666    41.583    aes/AES_rounds/r7/bs/sbox15/g0_b0__124_i_1_2
+    SLICE_X62Y17         LUT6 (Prop_lut6_I3_O)        0.124    41.707 r  aes/AES_rounds/r7/bs/sbox15/g0_b0__124_i_8/O
+                         net (fo=8, routed)           1.215    42.922    aes/AES_rounds/r0/bs/sbox15/sbox_out_9[29]
+    SLICE_X61Y25         LUT2 (Prop_lut2_I1_O)        0.124    43.046 r  aes/AES_rounds/r0/bs/sbox15/g0_b0__127_i_7/O
+                         net (fo=4, routed)           0.978    44.024    aes/AES_rounds/r0/bs/sbox15/g0_b0__127_i_7_n_0
+    SLICE_X60Y27         LUT3 (Prop_lut3_I1_O)        0.124    44.148 r  aes/AES_rounds/r0/bs/sbox15/g0_b0__127_i_1/O
+                         net (fo=32, routed)          1.824    45.972    aes/AES_rounds/r0/bs/sbox15/g0_b0__127_i_1_n_0
+    SLICE_X54Y38         LUT6 (Prop_lut6_I0_O)        0.124    46.096 r  aes/AES_rounds/r0/bs/sbox15/g2_b2__127/O
+                         net (fo=1, routed)           0.000    46.096    aes/AES_rounds/r8/bs/sbox15/g0_b0__140_i_17_1
+    SLICE_X54Y38         MUXF7 (Prop_muxf7_I1_O)      0.214    46.310 r  aes/AES_rounds/r8/bs/sbox15/g0_b0__140_i_55/O
+                         net (fo=1, routed)           0.000    46.310    aes/AES_rounds/r8/bs/sbox15/g0_b0__140_i_55_n_0
+    SLICE_X54Y38         MUXF8 (Prop_muxf8_I1_O)      0.088    46.398 r  aes/AES_rounds/r8/bs/sbox15/g0_b0__140_i_17/O
+                         net (fo=5, routed)           1.029    47.427    aes/AES_rounds/r0/bs/sbox10/sbox_out_8[21]
+    SLICE_X50Y38         LUT6 (Prop_lut6_I3_O)        0.319    47.746 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__143_i_4/O
+                         net (fo=32, routed)          1.824    49.570    aes/AES_rounds/r0/bs/sbox10/r9_out[123]
+    SLICE_X60Y44         LUT6 (Prop_lut6_I3_O)        0.124    49.694 r  aes/AES_rounds/r0/bs/sbox10/g3_b2__143/O
+                         net (fo=1, routed)           0.819    50.513    aes/AES_rounds/r9/bs/sbox15/aes_temp_out_reg[122]_P_0
+    SLICE_X60Y45         LUT6 (Prop_lut6_I1_O)        0.124    50.637 r  aes/AES_rounds/r9/bs/sbox15/aes_temp_out[122]_P_i_2/O
+                         net (fo=1, routed)           0.799    51.436    aes/AES_rounds/r0/bs/sbox10/r10_out[0]
+    SLICE_X60Y51         LUT6 (Prop_lut6_I3_O)        0.124    51.560 r  aes/AES_rounds/r0/bs/sbox10/aes_temp_out[122]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.560    aes_n_40
+    SLICE_X60Y51         FDRE                                         r  aes_temp_out_reg[122]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.510   104.933    clk_IBUF_BUFG
+    SLICE_X60Y51         FDRE                                         r  aes_temp_out_reg[122]_P/C
+                         clock pessimism              0.259   105.192    
+                         clock uncertainty           -0.035   105.156    
+    SLICE_X60Y51         FDRE (Setup_fdre_C_D)        0.077   105.233    aes_temp_out_reg[122]_P
+  -------------------------------------------------------------------
+                         required time                        105.233    
+                         arrival time                         -51.560    
+  -------------------------------------------------------------------
+                         slack                                 53.673    
+
+Slack (MET) :             53.675ns  (required time - arrival time)
+  Source:                 aes_data_in_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[91]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (sys_clk_pin rise@100.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        46.376ns  (logic 8.027ns (17.308%)  route 38.349ns (82.692%))
+  Logic Levels:           42  (LUT2=7 LUT4=3 LUT6=24 MUXF7=4 MUXF8=4)
+  Clock Path Skew:        0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.097ns = ( 105.097 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.229ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.626     5.229    clk_IBUF_BUFG
+    SLICE_X55Y51         FDCE                                         r  aes_data_in_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y51         FDCE (Prop_fdce_C_Q)         0.456     5.685 r  aes_data_in_reg[18]/Q
+                         net (fo=34, routed)          2.205     7.889    aes/AES_rounds/r9/bs/sbox6/g0_b0__7_i_9[2]
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.013 r  aes/AES_rounds/r9/bs/sbox6/g2_b7__156/O
+                         net (fo=1, routed)           0.853     8.866    aes/AES_rounds/r0/bs/sbox2/g0_b0__16_i_38_0
+    SLICE_X40Y50         LUT6 (Prop_lut6_I1_O)        0.124     8.990 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__6_i_10/O
+                         net (fo=5, routed)           0.659     9.649    aes/AES_rounds/r0/bs/sbox2/aes_data_in_reg[23][7]
+    SLICE_X38Y48         LUT6 (Prop_lut6_I0_O)        0.124     9.773 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7/O
+                         net (fo=4, routed)           1.035    10.808    aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_7_n_0
+    SLICE_X36Y48         LUT4 (Prop_lut4_I1_O)        0.124    10.932 r  aes/AES_rounds/r0/bs/sbox2/g0_b0__7_i_1/O
+                         net (fo=32, routed)          1.867    12.798    aes/AES_rounds/r0/bs/sbox2/r1_out[56]
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.922 r  aes/AES_rounds/r0/bs/sbox2/g0_b7__7/O
+                         net (fo=1, routed)           0.689    13.612    aes/AES_rounds/r1/bs/sbox7/g0_b0__40_i_32
+    SLICE_X30Y46         LUT6 (Prop_lut6_I0_O)        0.124    13.736 r  aes/AES_rounds/r1/bs/sbox7/g0_b0__20_i_41/O
+                         net (fo=5, routed)           0.957    14.693    aes/AES_rounds/r0/bs/sbox9/sbox_out_15[15]
+    SLICE_X31Y48         LUT2 (Prop_lut2_I1_O)        0.152    14.845 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7/O
+                         net (fo=4, routed)           0.405    15.250    aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_7_n_0
+    SLICE_X30Y48         LUT4 (Prop_lut4_I3_O)        0.326    15.576 r  aes/AES_rounds/r0/bs/sbox9/g0_b0__23_i_1/O
+                         net (fo=32, routed)          1.685    17.261    aes/AES_rounds/r0/bs/sbox9/r2_out[56]
+    SLICE_X23Y45         LUT6 (Prop_lut6_I0_O)        0.124    17.385 r  aes/AES_rounds/r0/bs/sbox9/g3_b3__23/O
+                         net (fo=1, routed)           0.000    17.385    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22_3
+    SLICE_X23Y45         MUXF7 (Prop_muxf7_I1_O)      0.245    17.630 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53/O
+                         net (fo=1, routed)           0.000    17.630    aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_53_n_0
+    SLICE_X23Y45         MUXF8 (Prop_muxf8_I0_O)      0.104    17.734 r  aes/AES_rounds/r2/bs/sbox7/g0_b0__36_i_22/O
+                         net (fo=3, routed)           0.682    18.416    aes/AES_rounds/r0/bs/sbox12/sbox_out_14[11]
+    SLICE_X24Y44         LUT2 (Prop_lut2_I1_O)        0.341    18.757 r  aes/AES_rounds/r0/bs/sbox12/g0_b0__36_i_20/O
+                         net (fo=3, routed)           0.468    19.225    aes/AES_rounds/r0/bs/sbox6/g0_b0__36
+    SLICE_X24Y44         LUT6 (Prop_lut6_I4_O)        0.332    19.557 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4/O
+                         net (fo=32, routed)          1.628    21.185    aes/AES_rounds/r0/bs/sbox6/g0_b0__37_i_4_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I3_O)        0.124    21.309 r  aes/AES_rounds/r0/bs/sbox6/g0_b7__37/O
+                         net (fo=1, routed)           0.689    21.999    aes/AES_rounds/r3/bs/sbox5/g0_b0__72_i_41_3
+    SLICE_X12Y43         LUT6 (Prop_lut6_I5_O)        0.124    22.123 r  aes/AES_rounds/r3/bs/sbox5/g0_b0__62_i_8/O
+                         net (fo=8, routed)           1.330    23.453    aes/AES_rounds/r0/bs/sbox6/sbox_out_13[9]
+    SLICE_X13Y38         LUT2 (Prop_lut2_I0_O)        0.152    23.605 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__61_i_7/O
+                         net (fo=4, routed)           0.689    24.295    aes/AES_rounds/r0/bs/sbox5/g3_b7__61_0
+    SLICE_X14Y39         LUT6 (Prop_lut6_I5_O)        0.332    24.627 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__61_i_4/O
+                         net (fo=32, routed)          2.012    26.639    aes/AES_rounds/r0/bs/sbox5/r4_out[107]
+    SLICE_X13Y32         LUT6 (Prop_lut6_I3_O)        0.124    26.763 r  aes/AES_rounds/r0/bs/sbox5/g2_b1__61/O
+                         net (fo=1, routed)           0.000    26.763    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14_1
+    SLICE_X13Y32         MUXF7 (Prop_muxf7_I1_O)      0.245    27.008 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48/O
+                         net (fo=1, routed)           0.000    27.008    aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_48_n_0
+    SLICE_X13Y32         MUXF8 (Prop_muxf8_I0_O)      0.104    27.112 r  aes/AES_rounds/r4/bs/sbox13/g0_b0__68_i_14/O
+                         net (fo=3, routed)           0.822    27.934    aes/AES_rounds/r0/bs/sbox0/sbox_out_12[22]
+    SLICE_X13Y31         LUT2 (Prop_lut2_I1_O)        0.344    28.278 r  aes/AES_rounds/r0/bs/sbox0/g0_b0__69_i_9/O
+                         net (fo=3, routed)           0.835    29.112    aes/AES_rounds/r0/bs/sbox10/g0_b0__70
+    SLICE_X12Y29         LUT6 (Prop_lut6_I5_O)        0.332    29.444 r  aes/AES_rounds/r0/bs/sbox10/g0_b0__70_i_2/O
+                         net (fo=32, routed)          1.694    31.138    aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_34
+    SLICE_X15Y15         LUT6 (Prop_lut6_I1_O)        0.124    31.262 r  aes/AES_rounds/r0/bs/sbox5/g2_b4__70/O
+                         net (fo=1, routed)           0.000    31.262    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9_1
+    SLICE_X15Y15         MUXF7 (Prop_muxf7_I1_O)      0.245    31.507 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10/O
+                         net (fo=1, routed)           0.000    31.507    aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_10_n_0
+    SLICE_X15Y15         MUXF8 (Prop_muxf8_I0_O)      0.104    31.611 r  aes/AES_rounds/r5/bs/sbox6/g0_b0__90_i_9/O
+                         net (fo=3, routed)           1.326    32.938    aes/AES_rounds/r0/bs/sbox5/sbox_out_11[10]
+    SLICE_X22Y14         LUT2 (Prop_lut2_I0_O)        0.316    33.254 r  aes/AES_rounds/r0/bs/sbox5/g0_b0__88_i_25/O
+                         net (fo=3, routed)           0.430    33.684    aes/AES_rounds/r0/bs/sbox7/g0_b0__88
+    SLICE_X23Y14         LUT6 (Prop_lut6_I4_O)        0.124    33.808 r  aes/AES_rounds/r0/bs/sbox7/g0_b0__88_i_5/O
+                         net (fo=32, routed)          1.462    35.270    aes/AES_rounds/r0/bs/sbox14/g0_b0__101_i_15
+    SLICE_X36Y17         LUT6 (Prop_lut6_I4_O)        0.124    35.394 r  aes/AES_rounds/r0/bs/sbox14/g2_b2__88/O
+                         net (fo=1, routed)           0.000    35.394    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10_2
+    SLICE_X36Y17         MUXF7 (Prop_muxf7_I0_O)      0.238    35.632 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16/O
+                         net (fo=1, routed)           0.000    35.632    aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_16_n_0
+    SLICE_X36Y17         MUXF8 (Prop_muxf8_I0_O)      0.104    35.736 r  aes/AES_rounds/r6/bs/sbox8/g0_b0__101_i_10/O
+                         net (fo=3, routed)           1.578    37.314    aes/AES_rounds/r0/bs/sbox14/sbox_out_10[15]
+    SLICE_X44Y22         LUT2 (Prop_lut2_I0_O)        0.316    37.630 r  aes/AES_rounds/r0/bs/sbox14/g0_b0__100_i_23/O
+                         net (fo=3, routed)           0.436    38.066    aes/AES_rounds/r0/bs/sbox11/g0_b0__102_1
+    SLICE_X44Y20         LUT4 (Prop_lut4_I3_O)        0.124    38.190 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__102_i_3/O
+                         net (fo=32, routed)          2.218    40.408    aes/AES_rounds/r0/bs/sbox11/r7_out[50]
+    SLICE_X59Y22         LUT6 (Prop_lut6_I2_O)        0.124    40.532 r  aes/AES_rounds/r0/bs/sbox11/g2_b7__102/O
+                         net (fo=1, routed)           0.881    41.414    aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_1_1
+    SLICE_X58Y22         LUT6 (Prop_lut6_I1_O)        0.124    41.538 r  aes/AES_rounds/r7/bs/sbox6/g0_b0__122_i_7/O
+                         net (fo=11, routed)          1.368    42.906    aes/AES_rounds/r0/bs/sbox11/sbox_out_9[13]
+    SLICE_X55Y26         LUT6 (Prop_lut6_I0_O)        0.124    43.030 r  aes/AES_rounds/r0/bs/sbox11/g0_b0__123_i_2/O
+                         net (fo=32, routed)          1.816    44.845    aes/AES_rounds/r0/bs/sbox11/r8_out[89]
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    44.969 r  aes/AES_rounds/r0/bs/sbox11/g0_b7__123/O
+                         net (fo=1, routed)           0.670    45.640    aes/AES_rounds/r8/bs/sbox11/aes_temp_out[119]_P_i_3_1
+    SLICE_X69Y28         LUT6 (Prop_lut6_I1_O)        0.124    45.764 r  aes/AES_rounds/r8/bs/sbox11/g0_b0__136_i_10/O
+                         net (fo=8, routed)           1.076    46.840    aes/AES_rounds/r0/bs/sbox6/sbox_out_8[23]
+    SLICE_X66Y35         LUT2 (Prop_lut2_I1_O)        0.156    46.996 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7/O
+                         net (fo=4, routed)           0.460    47.456    aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_7_n_0
+    SLICE_X66Y36         LUT6 (Prop_lut6_I5_O)        0.355    47.811 r  aes/AES_rounds/r0/bs/sbox6/g0_b0__139_i_4/O
+                         net (fo=32, routed)          1.598    49.409    aes/AES_rounds/r0/bs/sbox6/r9_out[91]
+    SLICE_X66Y40         LUT6 (Prop_lut6_I3_O)        0.124    49.533 r  aes/AES_rounds/r0/bs/sbox6/g0_b3__139/O
+                         net (fo=1, routed)           0.689    50.222    aes/AES_rounds/r9/bs/sbox11/aes_temp_out_reg[91]_P
+    SLICE_X66Y40         LUT6 (Prop_lut6_I0_O)        0.124    50.346 r  aes/AES_rounds/r9/bs/sbox11/aes_temp_out[91]_P_i_2/O
+                         net (fo=1, routed)           1.135    51.481    aes/AES_rounds/r0/bs/sbox6/r10_out[1]
+    SLICE_X61Y48         LUT6 (Prop_lut6_I3_O)        0.124    51.605 r  aes/AES_rounds/r0/bs/sbox6/aes_temp_out[91]_P_i_1/O
+                         net (fo=1, routed)           0.000    51.605    aes_n_31
+    SLICE_X61Y48         FDRE                                         r  aes_temp_out_reg[91]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    E3                                                0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411   101.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.920   103.331    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   103.422 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         1.675   105.097    clk_IBUF_BUFG
+    SLICE_X61Y48         FDRE                                         r  aes_temp_out_reg[91]_P/C
+                         clock pessimism              0.187   105.284    
+                         clock uncertainty           -0.035   105.249    
+    SLICE_X61Y48         FDRE (Setup_fdre_C_D)        0.031   105.280    aes_temp_out_reg[91]_P
+  -------------------------------------------------------------------
+                         required time                        105.280    
+                         arrival time                         -51.605    
+  -------------------------------------------------------------------
+                         slack                                 53.675    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[55]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[63]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.411ns  (logic 0.186ns (45.229%)  route 0.225ns (54.771%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.072ns
+    Source Clock Delay      (SCD):    1.551ns
+    Clock Pessimism Removal (CPR):    0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.631     1.551    clk_IBUF_BUFG
+    SLICE_X53Y47         FDRE                                         r  aes_temp_out_reg[55]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y47         FDRE (Prop_fdre_C_Q)         0.141     1.692 r  aes_temp_out_reg[55]_P/Q
+                         net (fo=1, routed)           0.225     1.917    aes/AES_rounds/r0/bs/sbox2/aes_temp_out_reg[63]_P
+    SLICE_X49Y45         LUT6 (Prop_lut6_I1_O)        0.045     1.962 r  aes/AES_rounds/r0/bs/sbox2/aes_temp_out[63]_P_i_1/O
+                         net (fo=1, routed)           0.000     1.962    aes_n_114
+    SLICE_X49Y45         FDRE                                         r  aes_temp_out_reg[63]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.907     2.072    clk_IBUF_BUFG
+    SLICE_X49Y45         FDRE                                         r  aes_temp_out_reg[63]_P/C
+                         clock pessimism             -0.254     1.818    
+    SLICE_X49Y45         FDRE (Hold_fdre_C_D)         0.091     1.909    aes_temp_out_reg[63]_P
+  -------------------------------------------------------------------
+                         required time                         -1.909    
+                         arrival time                           1.962    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.063ns  (arrival time - required time)
+  Source:                 aes_data_in_reg[83]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_data_in_reg[91]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.420ns  (logic 0.209ns (49.750%)  route 0.211ns (50.250%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.000ns
+    Source Clock Delay      (SCD):    1.484ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.565     1.484    clk_IBUF_BUFG
+    SLICE_X50Y56         FDCE                                         r  aes_data_in_reg[83]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y56         FDCE (Prop_fdce_C_Q)         0.164     1.648 r  aes_data_in_reg[83]/Q
+                         net (fo=34, routed)          0.211     1.859    aes_data_in_reg_n_0_[83]
+    SLICE_X53Y51         LUT5 (Prop_lut5_I4_O)        0.045     1.904 r  aes_data_in[91]_i_1/O
+                         net (fo=1, routed)           0.000     1.904    aes_data_in[91]_i_1_n_0
+    SLICE_X53Y51         FDCE                                         r  aes_data_in_reg[91]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.835     2.000    clk_IBUF_BUFG
+    SLICE_X53Y51         FDCE                                         r  aes_data_in_reg[91]/C
+                         clock pessimism             -0.250     1.749    
+    SLICE_X53Y51         FDCE (Hold_fdce_C_D)         0.092     1.841    aes_data_in_reg[91]
+  -------------------------------------------------------------------
+                         required time                         -1.841    
+                         arrival time                           1.904    
+  -------------------------------------------------------------------
+                         slack                                  0.063    
+
+Slack (MET) :             0.065ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[110]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[118]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.385ns  (logic 0.209ns (54.293%)  route 0.176ns (45.707%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.199ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.003ns
+    Source Clock Delay      (SCD):    1.553ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.633     1.553    clk_IBUF_BUFG
+    SLICE_X60Y48         FDRE                                         r  aes_temp_out_reg[110]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y48         FDRE (Prop_fdre_C_Q)         0.164     1.717 r  aes_temp_out_reg[110]_P/Q
+                         net (fo=1, routed)           0.176     1.893    aes/AES_rounds/r0/bs/sbox1/aes_temp_out_reg[118]_P
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.045     1.938 r  aes/AES_rounds/r0/bs/sbox1/aes_temp_out[118]_P_i_1/O
+                         net (fo=1, routed)           0.000     1.938    aes_n_25
+    SLICE_X60Y50         FDRE                                         r  aes_temp_out_reg[118]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.838     2.003    clk_IBUF_BUFG
+    SLICE_X60Y50         FDRE                                         r  aes_temp_out_reg[118]_P/C
+                         clock pessimism             -0.250     1.752    
+    SLICE_X60Y50         FDRE (Hold_fdre_C_D)         0.121     1.873    aes_temp_out_reg[118]_P
+  -------------------------------------------------------------------
+                         required time                         -1.873    
+                         arrival time                           1.938    
+  -------------------------------------------------------------------
+                         slack                                  0.065    
+
+Slack (MET) :             0.102ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[120]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            uart_tx_data_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.371ns  (logic 0.164ns (44.261%)  route 0.207ns (55.739%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.198ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.002ns
+    Source Clock Delay      (SCD):    1.553ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.633     1.553    clk_IBUF_BUFG
+    SLICE_X58Y49         FDRE                                         r  aes_temp_out_reg[120]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y49         FDRE (Prop_fdre_C_Q)         0.164     1.717 r  aes_temp_out_reg[120]_P/Q
+                         net (fo=2, routed)           0.207     1.923    aes_temp_out_reg[120]_P_n_0
+    SLICE_X59Y56         FDCE                                         r  uart_tx_data_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.837     2.002    clk_IBUF_BUFG
+    SLICE_X59Y56         FDCE                                         r  uart_tx_data_reg[0]/C
+                         clock pessimism             -0.250     1.751    
+    SLICE_X59Y56         FDCE (Hold_fdce_C_D)         0.070     1.821    uart_tx_data_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.821    
+                         arrival time                           1.923    
+  -------------------------------------------------------------------
+                         slack                                  0.102    
+
+Slack (MET) :             0.106ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[60]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[68]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.240ns  (logic 0.186ns (77.466%)  route 0.054ns (22.534%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.072ns
+    Source Clock Delay      (SCD):    1.552ns
+    Clock Pessimism Removal (CPR):    0.507ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.632     1.552    clk_IBUF_BUFG
+    SLICE_X47Y46         FDRE                                         r  aes_temp_out_reg[60]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y46         FDRE (Prop_fdre_C_Q)         0.141     1.693 r  aes_temp_out_reg[60]_P/Q
+                         net (fo=1, routed)           0.054     1.747    aes/AES_rounds/r0/bs/sbox15/aes_temp_out_reg[68]_P
+    SLICE_X46Y46         LUT6 (Prop_lut6_I1_O)        0.045     1.792 r  aes/AES_rounds/r0/bs/sbox15/aes_temp_out[68]_P_i_1/O
+                         net (fo=1, routed)           0.000     1.792    aes_n_46
+    SLICE_X46Y46         FDRE                                         r  aes_temp_out_reg[68]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.907     2.072    clk_IBUF_BUFG
+    SLICE_X46Y46         FDRE                                         r  aes_temp_out_reg[68]_P/C
+                         clock pessimism             -0.507     1.565    
+    SLICE_X46Y46         FDRE (Hold_fdre_C_D)         0.121     1.686    aes_temp_out_reg[68]_P
+  -------------------------------------------------------------------
+                         required time                         -1.686    
+                         arrival time                           1.792    
+  -------------------------------------------------------------------
+                         slack                                  0.106    
+
+Slack (MET) :             0.108ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[79]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[87]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.493ns  (logic 0.209ns (42.367%)  route 0.284ns (57.633%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.070ns
+    Source Clock Delay      (SCD):    1.552ns
+    Clock Pessimism Removal (CPR):    0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.632     1.552    clk_IBUF_BUFG
+    SLICE_X46Y46         FDRE                                         r  aes_temp_out_reg[79]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y46         FDRE (Prop_fdre_C_Q)         0.164     1.716 r  aes_temp_out_reg[79]_P/Q
+                         net (fo=1, routed)           0.284     2.000    aes/AES_rounds/r0/bs/sbox13/aes_temp_out_reg[87]_P_0
+    SLICE_X54Y47         LUT6 (Prop_lut6_I1_O)        0.045     2.045 r  aes/AES_rounds/r0/bs/sbox13/aes_temp_out[87]_P_i_1/O
+                         net (fo=1, routed)           0.000     2.045    aes_n_115
+    SLICE_X54Y47         FDRE                                         r  aes_temp_out_reg[87]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.905     2.070    clk_IBUF_BUFG
+    SLICE_X54Y47         FDRE                                         r  aes_temp_out_reg[87]_P/C
+                         clock pessimism             -0.254     1.816    
+    SLICE_X54Y47         FDRE (Hold_fdre_C_D)         0.121     1.937    aes_temp_out_reg[87]_P
+  -------------------------------------------------------------------
+                         required time                         -1.937    
+                         arrival time                           2.045    
+  -------------------------------------------------------------------
+                         slack                                  0.108    
+
+Slack (MET) :             0.109ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[24]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[32]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.186ns (76.827%)  route 0.056ns (23.174%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.071ns
+    Source Clock Delay      (SCD):    1.552ns
+    Clock Pessimism Removal (CPR):    0.506ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.632     1.552    clk_IBUF_BUFG
+    SLICE_X57Y48         FDRE                                         r  aes_temp_out_reg[24]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y48         FDRE (Prop_fdre_C_Q)         0.141     1.693 r  aes_temp_out_reg[24]_P/Q
+                         net (fo=1, routed)           0.056     1.749    aes/AES_rounds/r0/bs/sbox11/aes_temp_out_reg[32]_P
+    SLICE_X56Y48         LUT6 (Prop_lut6_I1_O)        0.045     1.794 r  aes/AES_rounds/r0/bs/sbox11/aes_temp_out[32]_P_i_1/O
+                         net (fo=1, routed)           0.000     1.794    aes_n_10
+    SLICE_X56Y48         FDRE                                         r  aes_temp_out_reg[32]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.906     2.071    clk_IBUF_BUFG
+    SLICE_X56Y48         FDRE                                         r  aes_temp_out_reg[32]_P/C
+                         clock pessimism             -0.506     1.565    
+    SLICE_X56Y48         FDRE (Hold_fdre_C_D)         0.120     1.685    aes_temp_out_reg[32]_P
+  -------------------------------------------------------------------
+                         required time                         -1.685    
+                         arrival time                           1.794    
+  -------------------------------------------------------------------
+                         slack                                  0.109    
+
+Slack (MET) :             0.109ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[57]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[65]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.186ns (76.827%)  route 0.056ns (23.174%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.072ns
+    Source Clock Delay      (SCD):    1.552ns
+    Clock Pessimism Removal (CPR):    0.507ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.632     1.552    clk_IBUF_BUFG
+    SLICE_X47Y45         FDRE                                         r  aes_temp_out_reg[57]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y45         FDRE (Prop_fdre_C_Q)         0.141     1.693 r  aes_temp_out_reg[57]_P/Q
+                         net (fo=1, routed)           0.056     1.749    aes/AES_rounds/r0/bs/sbox15/aes_temp_out_reg[65]_P
+    SLICE_X46Y45         LUT6 (Prop_lut6_I1_O)        0.045     1.794 r  aes/AES_rounds/r0/bs/sbox15/aes_temp_out[65]_P_i_1/O
+                         net (fo=1, routed)           0.000     1.794    aes_n_49
+    SLICE_X46Y45         FDRE                                         r  aes_temp_out_reg[65]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.907     2.072    clk_IBUF_BUFG
+    SLICE_X46Y45         FDRE                                         r  aes_temp_out_reg[65]_P/C
+                         clock pessimism             -0.507     1.565    
+    SLICE_X46Y45         FDRE (Hold_fdre_C_D)         0.120     1.685    aes_temp_out_reg[65]_P
+  -------------------------------------------------------------------
+                         required time                         -1.685    
+                         arrival time                           1.794    
+  -------------------------------------------------------------------
+                         slack                                  0.109    
+
+Slack (MET) :             0.127ns  (arrival time - required time)
+  Source:                 aes_temp_out_reg[34]_P/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            aes_temp_out_reg[42]_P/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.552ns  (logic 0.209ns (37.834%)  route 0.343ns (62.166%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.333ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.070ns
+    Source Clock Delay      (SCD):    1.486ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.567     1.486    clk_IBUF_BUFG
+    SLICE_X58Y51         FDRE                                         r  aes_temp_out_reg[34]_P/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y51         FDRE (Prop_fdre_C_Q)         0.164     1.650 r  aes_temp_out_reg[34]_P/Q
+                         net (fo=1, routed)           0.343     1.994    aes/AES_rounds/r0/bs/sbox0/aes_temp_out_reg[42]_P
+    SLICE_X52Y48         LUT6 (Prop_lut6_I1_O)        0.045     2.039 r  aes/AES_rounds/r0/bs/sbox0/aes_temp_out[42]_P_i_1/O
+                         net (fo=1, routed)           0.000     2.039    aes_n_53
+    SLICE_X52Y48         FDRE                                         r  aes_temp_out_reg[42]_P/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.905     2.070    clk_IBUF_BUFG
+    SLICE_X52Y48         FDRE                                         r  aes_temp_out_reg[42]_P/C
+                         clock pessimism             -0.250     1.819    
+    SLICE_X52Y48         FDRE (Hold_fdre_C_D)         0.092     1.911    aes_temp_out_reg[42]_P
+  -------------------------------------------------------------------
+                         required time                         -1.911    
+                         arrival time                           2.039    
+  -------------------------------------------------------------------
+                         slack                                  0.127    
+
+Slack (MET) :             0.128ns  (arrival time - required time)
+  Source:                 u/utx/tx_shift_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            u/utx/tx_shift_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.262ns  (logic 0.186ns (70.964%)  route 0.076ns (29.036%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.001ns
+    Source Clock Delay      (SCD):    1.484ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.565     1.484    u/utx/clk_IBUF_BUFG
+    SLICE_X59Y57         FDRE                                         r  u/utx/tx_shift_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y57         FDRE (Prop_fdre_C_Q)         0.141     1.625 r  u/utx/tx_shift_reg[7]/Q
+                         net (fo=3, routed)           0.076     1.701    u/utx/tx_shift[7]
+    SLICE_X58Y57         LUT6 (Prop_lut6_I0_O)        0.045     1.746 r  u/utx/tx_shift[6]_i_1/O
+                         net (fo=1, routed)           0.000     1.746    u/utx/tx_shift[6]_i_1_n_0
+    SLICE_X58Y57         FDRE                                         r  u/utx/tx_shift_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clk_IBUF_BUFG_inst/O
+                         net (fo=354, routed)         0.836     2.001    u/utx/clk_IBUF_BUFG
+    SLICE_X58Y57         FDRE                                         r  u/utx/tx_shift_reg[6]/C
+                         clock pessimism             -0.503     1.497    
+    SLICE_X58Y57         FDRE (Hold_fdre_C_D)         0.121     1.618    u/utx/tx_shift_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.618    
+                         arrival time                           1.746    
+  -------------------------------------------------------------------
+                         slack                                  0.128    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 50.000 }
+Period(ns):         100.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            2.155         100.000     97.845     BUFGCTRL_X0Y16  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDPE/C   n/a            1.000         100.000     99.000     SLICE_X56Y65    FSM_onehot_next_state_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X56Y66    FSM_onehot_next_state_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X52Y60    FSM_onehot_next_state_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X58Y52    aes_data_in_reg[113]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X58Y52    aes_data_in_reg[114]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X59Y51    aes_data_in_reg[115]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X59Y51    aes_data_in_reg[116]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X59Y53    aes_data_in_reg[117]/C
+Min Period        n/a     FDCE/C   n/a            1.000         100.000     99.000     SLICE_X54Y51    aes_data_in_reg[118]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X52Y60    FSM_onehot_next_state_reg[2]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y49    aes_data_in_reg[29]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X51Y49    aes_data_in_reg[51]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y49    aes_data_in_reg[89]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X57Y49    aes_data_in_reg[92]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X57Y49    aes_data_in_reg[97]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         50.000      49.500     SLICE_X57Y47    aes_temp_out_reg[127]_P/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         50.000      49.500     SLICE_X57Y48    aes_temp_out_reg[14]_P/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         50.000      49.500     SLICE_X57Y48    aes_temp_out_reg[16]_P/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         50.000      49.500     SLICE_X57Y48    aes_temp_out_reg[24]_P/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X55Y54    aes_data_in_reg[11]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y57    aes_data_in_reg[121]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X55Y53    aes_data_in_reg[15]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y52    aes_data_in_reg[17]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y64    aes_data_in_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y52    aes_data_in_reg[25]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y64    aes_data_in_reg[2]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X53Y53    aes_data_in_reg[32]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X56Y52    aes_data_in_reg[33]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         50.000      49.500     SLICE_X52Y53    aes_data_in_reg[35]/C
+
+
+

@@ -1,0 +1,970 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec  2 11:04:37 2019
+# Process ID: 15552
+# Current directory: C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.runs/synth_1
+# Command line: vivado.exe -log controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source controller.tcl
+# Log file: C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.runs/synth_1/controller.vds
+# Journal file: C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source controller.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 355.836 ; gain = 65.438
+Command: synth_design -top controller -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16328 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 938.777 ; gain = 179.391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/controller.v:5]
+	Parameter IDLE bound to: 2'b00 
+	Parameter RECEIVING bound to: 2'b01 
+	Parameter TRANSMITTING bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'uart' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:183]
+	Parameter CLK_HZ bound to: 100000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter BAUD_DIVISOR bound to: 868 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:26]
+	Parameter BAUD_DIVISOR bound to: 868 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:36]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:37]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:38]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (1#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:26]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:86]
+	Parameter BAUD_DIVISOR bound to: 868 - type: integer 
+	Parameter WAITING bound to: 2'b00 
+	Parameter READING bound to: 2'b01 
+	Parameter STOP bound to: 2'b10 
+	Parameter RECOVER bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (2#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:86]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (3#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/uart.v:183]
+INFO: [Synth 8-6157] synthesizing module 'AES' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/new/AES.v:4]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/new/AES.v:16]
+INFO: [Synth 8-6157] synthesizing module 'rounds' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/new/rounds.v:22]
+INFO: [Synth 8-6157] synthesizing module 'key_addition' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/key_addition.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SBox' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/SBox.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'SBox' (4#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/SBox.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'key_addition' (5#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/key_addition.v:1]
+INFO: [Synth 8-6157] synthesizing module 'round' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/new/rounds.v:65]
+INFO: [Synth 8-6157] synthesizing module 'Bytesubstitution' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/SBox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Bytesubstitution' (6#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/SBox.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shiftrows' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/shiftrows.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shiftrows' (7#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/imports/new/shiftrows.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mix_col' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/AES_128_final.srcs/sources_1/imports/files/mix_col.v:35]
+INFO: [Synth 8-6157] synthesizing module 'mix_single_col' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/AES_128_final.srcs/sources_1/imports/files/mix_col.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mix_single_col' (8#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/AES_128_final.srcs/sources_1/imports/files/mix_col.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mix_col' (9#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/AES_128_final.srcs/sources_1/imports/files/mix_col.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'round' (10#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/new/rounds.v:65]
+INFO: [Synth 8-6157] synthesizing module 'final_round' [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/new/rounds.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'final_round' (11#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/new/rounds.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'rounds' (12#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/sources_1/new/rounds.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'AES' (13#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/new/AES.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/controller.v:69]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/controller.v:60]
+WARNING: [Synth 8-5788] Register aes_temp_out_reg in module controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/controller.v:82]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (14#1) [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/sources_1/imports/Downloads/controller.v:5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1003.434 ; gain = 244.047
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1003.434 ; gain = 244.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1003.434 ; gain = 244.047
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/constrs_1/imports/Downloads/my.xdc]
+Finished Parsing XDC File [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/constrs_1/imports/Downloads/my.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.srcs/constrs_1/imports/Downloads/my.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/controller_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1146.676 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1146.676 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1146.676 ; gain = 387.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1146.676 ; gain = 387.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1146.676 ; gain = 387.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'next_state_reg' in module 'controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 WAITING |                               00 |                               00
+                 READING |                               01 |                               01
+                    STOP |                               10 |                               10
+                 RECOVER |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+               RECEIVING |                              010 |                               01
+            TRANSMITTING |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'next_state_reg' using encoding 'one-hot' in module 'controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1146.676 ; gain = 387.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 11    
+	   3 Input     32 Bit         XORs := 10    
+	   2 Input     32 Bit         XORs := 30    
+	   3 Input      8 Bit         XORs := 108   
+	   5 Input      8 Bit         XORs := 72    
+	   2 Input      1 Bit         XORs := 433   
++---Registers : 
+	              128 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 10    
+	   3 Input    128 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 9     
+	   3 Input    128 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 9     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module uart_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 5     
+Module key_addition 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
+Module mix_single_col 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      8 Bit         XORs := 3     
+	   5 Input      8 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 12    
+Module round 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module final_round 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module rounds 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+Module AES 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[0]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[1]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[2]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[3]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[4]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[5]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[6]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[7]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[8]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[9]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[10]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[11]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[12]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[13]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[14]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[15]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[16]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[17]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[18]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[19]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[20]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[21]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[22]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[23]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[24]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[25]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[26]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[27]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[28]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[29]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[30]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[31]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[32]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[33]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[34]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[35]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[36]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[37]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[38]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[39]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[40]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[41]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[42]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[43]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[44]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[45]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[46]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[47]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[48]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[49]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[50]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[51]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[52]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[53]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[54]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[55]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[56]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[57]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[58]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[59]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[60]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[61]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[62]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[63]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[64]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[65]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[66]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[67]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[68]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[69]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[70]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[71]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[72]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[73]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[74]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[75]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[76]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[77]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[78]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[79]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[80]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[81]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[82]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[83]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[84]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[85]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[86]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[87]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[88]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[89]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[90]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[91]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[92]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[93]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[94]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[95]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[96]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[97]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[98]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\aes_temp_out_reg[99]_LDC )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[127]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[127]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[126]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[126]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[125]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[125]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[124]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[124]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[123]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[123]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[122]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[122]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[121]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[121]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[120]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[120]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[119]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[119]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[118]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[118]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[117]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[117]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[116]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[116]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[115]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[115]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[114]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[114]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[113]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[113]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[112]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[112]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[111]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[111]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[110]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[110]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[109]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[109]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[108]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[108]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[107]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[107]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[106]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[106]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[105]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[105]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[104]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[104]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[103]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[103]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[102]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[102]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[101]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[101]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[100]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[100]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[99]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[99]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[98]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[98]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[97]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[97]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[96]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[96]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[95]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[95]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[94]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[94]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[93]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[93]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[92]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[92]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[91]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[91]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[90]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[90]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[89]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[89]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[88]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[88]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[87]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[87]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[86]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[86]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[85]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[85]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[84]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[84]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[83]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[83]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[82]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[82]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[81]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[81]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[80]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[80]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[79]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[79]_C) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[78]_LDC) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (aes_temp_out_reg[78]_C) is unused and will be removed from module controller.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:51 . Memory (MB): peak = 1146.676 ; gain = 387.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------+-----------------------+---------------+----------------+
+|Module Name  | RTL Object            | Depth x Width | Implemented As | 
++-------------+-----------------------+---------------+----------------+
+|SBox         | sbox_lookup           | 256x8         | LUT            | 
+|key_addition | sbox3/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox0/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox0/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox3/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox0/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox3/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox0/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox3/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox0/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox3/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox1/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox0/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox3/sbox_lookup     | 256x8         | LUT            | 
+|key_addition | sbox2/sbox_lookup     | 256x8         | LUT            | 
+|round        | bs/sbox1/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox2/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox4/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox5/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox6/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox7/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox9/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox11/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox14/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox0/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox1/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox7/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox0/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox1/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox2/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox3/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox4/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox5/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox6/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox7/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox8/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox9/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox11/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox14/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox0/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox3/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox6/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox7/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox9/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox2/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox14/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox11/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox14/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox0/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox1/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox2/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox3/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox4/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox5/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox6/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox7/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox8/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox9/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox3/sbox_lookup  | 256x8         | LUT            | 
+|round        | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox14/sbox_lookup | 256x8         | LUT            | 
+|round        | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
+|final_round  | bs/sbox0/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox1/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox2/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox3/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox4/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox5/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox6/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox7/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox8/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox9/sbox_lookup  | 256x8         | LUT            | 
+|final_round  | bs/sbox10/sbox_lookup | 256x8         | LUT            | 
+|final_round  | bs/sbox11/sbox_lookup | 256x8         | LUT            | 
+|final_round  | bs/sbox12/sbox_lookup | 256x8         | LUT            | 
+|final_round  | bs/sbox13/sbox_lookup | 256x8         | LUT            | 
+|final_round  | bs/sbox14/sbox_lookup | 256x8         | LUT            | 
+|final_round  | bs/sbox15/sbox_lookup | 256x8         | LUT            | 
++-------------+-----------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:52 ; elapsed = 00:02:01 . Memory (MB): peak = 1162.336 ; gain = 402.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:12 . Memory (MB): peak = 1214.527 ; gain = 455.141
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:11 ; elapsed = 00:02:21 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:16 ; elapsed = 00:02:26 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:20 ; elapsed = 00:02:30 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:24 ; elapsed = 00:02:34 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:24 ; elapsed = 00:02:34 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:24 ; elapsed = 00:02:34 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     2|
+|4     |LUT2   |   202|
+|5     |LUT3   |    27|
+|6     |LUT4   |   168|
+|7     |LUT5   |   704|
+|8     |LUT6   |  6269|
+|9     |MUXF7  |  1480|
+|10    |MUXF8  |   720|
+|11    |FDCE   |   154|
+|12    |FDPE   |     1|
+|13    |FDRE   |   198|
+|14    |FDSE   |     1|
+|15    |IBUF   |     4|
+|16    |OBUF   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------------+------+
+|      |Instance         |Module               |Cells |
++------+-----------------+---------------------+------+
+|1     |top              |                     |  9940|
+|2     |  aes            |AES                  |  9375|
+|3     |    AES_rounds   |rounds               |  9364|
+|4     |      r0         |round                |  6420|
+|5     |        bs       |Bytesubstitution_159 |  6420|
+|6     |          sbox0  |SBox_160             |   405|
+|7     |          sbox1  |SBox_161             |   402|
+|8     |          sbox10 |SBox_162             |   400|
+|9     |          sbox11 |SBox_163             |   395|
+|10    |          sbox12 |SBox_164             |   402|
+|11    |          sbox13 |SBox_165             |   401|
+|12    |          sbox14 |SBox_166             |   406|
+|13    |          sbox15 |SBox_167             |   401|
+|14    |          sbox2  |SBox_168             |   405|
+|15    |          sbox3  |SBox_169             |   402|
+|16    |          sbox4  |SBox_170             |   409|
+|17    |          sbox5  |SBox_171             |   399|
+|18    |          sbox6  |SBox_172             |   406|
+|19    |          sbox7  |SBox_173             |   392|
+|20    |          sbox8  |SBox_174             |   396|
+|21    |          sbox9  |SBox_175             |   399|
+|22    |      r1         |round_0              |   288|
+|23    |        bs       |Bytesubstitution_142 |   288|
+|24    |          sbox0  |SBox_143             |    18|
+|25    |          sbox1  |SBox_144             |    18|
+|26    |          sbox10 |SBox_145             |    18|
+|27    |          sbox11 |SBox_146             |    18|
+|28    |          sbox12 |SBox_147             |    18|
+|29    |          sbox13 |SBox_148             |    18|
+|30    |          sbox14 |SBox_149             |    18|
+|31    |          sbox15 |SBox_150             |    18|
+|32    |          sbox2  |SBox_151             |    18|
+|33    |          sbox3  |SBox_152             |    18|
+|34    |          sbox4  |SBox_153             |    18|
+|35    |          sbox5  |SBox_154             |    18|
+|36    |          sbox6  |SBox_155             |    18|
+|37    |          sbox7  |SBox_156             |    18|
+|38    |          sbox8  |SBox_157             |    18|
+|39    |          sbox9  |SBox_158             |    18|
+|40    |      r2         |round_1              |   288|
+|41    |        bs       |Bytesubstitution_125 |   288|
+|42    |          sbox0  |SBox_126             |    18|
+|43    |          sbox1  |SBox_127             |    18|
+|44    |          sbox10 |SBox_128             |    18|
+|45    |          sbox11 |SBox_129             |    18|
+|46    |          sbox12 |SBox_130             |    18|
+|47    |          sbox13 |SBox_131             |    18|
+|48    |          sbox14 |SBox_132             |    18|
+|49    |          sbox15 |SBox_133             |    18|
+|50    |          sbox2  |SBox_134             |    18|
+|51    |          sbox3  |SBox_135             |    18|
+|52    |          sbox4  |SBox_136             |    18|
+|53    |          sbox5  |SBox_137             |    18|
+|54    |          sbox6  |SBox_138             |    18|
+|55    |          sbox7  |SBox_139             |    18|
+|56    |          sbox8  |SBox_140             |    18|
+|57    |          sbox9  |SBox_141             |    18|
+|58    |      r3         |round_2              |   288|
+|59    |        bs       |Bytesubstitution_108 |   288|
+|60    |          sbox0  |SBox_109             |    18|
+|61    |          sbox1  |SBox_110             |    18|
+|62    |          sbox10 |SBox_111             |    18|
+|63    |          sbox11 |SBox_112             |    18|
+|64    |          sbox12 |SBox_113             |    18|
+|65    |          sbox13 |SBox_114             |    18|
+|66    |          sbox14 |SBox_115             |    18|
+|67    |          sbox15 |SBox_116             |    18|
+|68    |          sbox2  |SBox_117             |    18|
+|69    |          sbox3  |SBox_118             |    18|
+|70    |          sbox4  |SBox_119             |    18|
+|71    |          sbox5  |SBox_120             |    18|
+|72    |          sbox6  |SBox_121             |    18|
+|73    |          sbox7  |SBox_122             |    18|
+|74    |          sbox8  |SBox_123             |    18|
+|75    |          sbox9  |SBox_124             |    18|
+|76    |      r4         |round_3              |   288|
+|77    |        bs       |Bytesubstitution_91  |   288|
+|78    |          sbox0  |SBox_92              |    18|
+|79    |          sbox1  |SBox_93              |    18|
+|80    |          sbox10 |SBox_94              |    18|
+|81    |          sbox11 |SBox_95              |    18|
+|82    |          sbox12 |SBox_96              |    18|
+|83    |          sbox13 |SBox_97              |    18|
+|84    |          sbox14 |SBox_98              |    18|
+|85    |          sbox15 |SBox_99              |    18|
+|86    |          sbox2  |SBox_100             |    18|
+|87    |          sbox3  |SBox_101             |    18|
+|88    |          sbox4  |SBox_102             |    18|
+|89    |          sbox5  |SBox_103             |    18|
+|90    |          sbox6  |SBox_104             |    18|
+|91    |          sbox7  |SBox_105             |    18|
+|92    |          sbox8  |SBox_106             |    18|
+|93    |          sbox9  |SBox_107             |    18|
+|94    |      r5         |round_4              |   288|
+|95    |        bs       |Bytesubstitution_74  |   288|
+|96    |          sbox0  |SBox_75              |    18|
+|97    |          sbox1  |SBox_76              |    18|
+|98    |          sbox10 |SBox_77              |    18|
+|99    |          sbox11 |SBox_78              |    18|
+|100   |          sbox12 |SBox_79              |    18|
+|101   |          sbox13 |SBox_80              |    18|
+|102   |          sbox14 |SBox_81              |    18|
+|103   |          sbox15 |SBox_82              |    18|
+|104   |          sbox2  |SBox_83              |    18|
+|105   |          sbox3  |SBox_84              |    18|
+|106   |          sbox4  |SBox_85              |    18|
+|107   |          sbox5  |SBox_86              |    18|
+|108   |          sbox6  |SBox_87              |    18|
+|109   |          sbox7  |SBox_88              |    18|
+|110   |          sbox8  |SBox_89              |    18|
+|111   |          sbox9  |SBox_90              |    18|
+|112   |      r6         |round_5              |   288|
+|113   |        bs       |Bytesubstitution_57  |   288|
+|114   |          sbox0  |SBox_58              |    18|
+|115   |          sbox1  |SBox_59              |    18|
+|116   |          sbox10 |SBox_60              |    18|
+|117   |          sbox11 |SBox_61              |    18|
+|118   |          sbox12 |SBox_62              |    18|
+|119   |          sbox13 |SBox_63              |    18|
+|120   |          sbox14 |SBox_64              |    18|
+|121   |          sbox15 |SBox_65              |    18|
+|122   |          sbox2  |SBox_66              |    18|
+|123   |          sbox3  |SBox_67              |    18|
+|124   |          sbox4  |SBox_68              |    18|
+|125   |          sbox5  |SBox_69              |    18|
+|126   |          sbox6  |SBox_70              |    18|
+|127   |          sbox7  |SBox_71              |    18|
+|128   |          sbox8  |SBox_72              |    18|
+|129   |          sbox9  |SBox_73              |    18|
+|130   |      r7         |round_6              |   288|
+|131   |        bs       |Bytesubstitution_40  |   288|
+|132   |          sbox0  |SBox_41              |    18|
+|133   |          sbox1  |SBox_42              |    18|
+|134   |          sbox10 |SBox_43              |    18|
+|135   |          sbox11 |SBox_44              |    18|
+|136   |          sbox12 |SBox_45              |    18|
+|137   |          sbox13 |SBox_46              |    18|
+|138   |          sbox14 |SBox_47              |    18|
+|139   |          sbox15 |SBox_48              |    18|
+|140   |          sbox2  |SBox_49              |    18|
+|141   |          sbox3  |SBox_50              |    18|
+|142   |          sbox4  |SBox_51              |    18|
+|143   |          sbox5  |SBox_52              |    18|
+|144   |          sbox6  |SBox_53              |    18|
+|145   |          sbox7  |SBox_54              |    18|
+|146   |          sbox8  |SBox_55              |    18|
+|147   |          sbox9  |SBox_56              |    18|
+|148   |      r8         |round_7              |   288|
+|149   |        bs       |Bytesubstitution_23  |   288|
+|150   |          sbox0  |SBox_24              |    18|
+|151   |          sbox1  |SBox_25              |    18|
+|152   |          sbox10 |SBox_26              |    18|
+|153   |          sbox11 |SBox_27              |    18|
+|154   |          sbox12 |SBox_28              |    18|
+|155   |          sbox13 |SBox_29              |    18|
+|156   |          sbox14 |SBox_30              |    18|
+|157   |          sbox15 |SBox_31              |    18|
+|158   |          sbox2  |SBox_32              |    18|
+|159   |          sbox3  |SBox_33              |    18|
+|160   |          sbox4  |SBox_34              |    18|
+|161   |          sbox5  |SBox_35              |    18|
+|162   |          sbox6  |SBox_36              |    18|
+|163   |          sbox7  |SBox_37              |    18|
+|164   |          sbox8  |SBox_38              |    18|
+|165   |          sbox9  |SBox_39              |    18|
+|166   |      r9         |final_round          |   640|
+|167   |        bs       |Bytesubstitution     |   640|
+|168   |          sbox0  |SBox                 |    70|
+|169   |          sbox1  |SBox_8               |   100|
+|170   |          sbox10 |SBox_9               |   102|
+|171   |          sbox11 |SBox_10              |    40|
+|172   |          sbox12 |SBox_11              |     8|
+|173   |          sbox13 |SBox_12              |     8|
+|174   |          sbox14 |SBox_13              |     8|
+|175   |          sbox15 |SBox_14              |    32|
+|176   |          sbox2  |SBox_15              |    42|
+|177   |          sbox3  |SBox_16              |    88|
+|178   |          sbox4  |SBox_17              |     8|
+|179   |          sbox5  |SBox_18              |    42|
+|180   |          sbox6  |SBox_19              |    40|
+|181   |          sbox7  |SBox_20              |     8|
+|182   |          sbox8  |SBox_21              |    36|
+|183   |          sbox9  |SBox_22              |     8|
+|184   |  u              |uart                 |   158|
+|185   |    urx          |uart_rx              |   100|
+|186   |    utx          |uart_tx              |    58|
++------+-----------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:24 ; elapsed = 00:02:34 . Memory (MB): peak = 1288.000 ; gain = 528.613
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 256 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:12 ; elapsed = 00:02:29 . Memory (MB): peak = 1288.000 ; gain = 385.371
+Synthesis Optimization Complete : Time (s): cpu = 00:02:25 ; elapsed = 00:02:35 . Memory (MB): peak = 1288.000 ; gain = 528.613
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2208 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1288.000 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+152 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:38 ; elapsed = 00:02:51 . Memory (MB): peak = 1288.000 ; gain = 792.344
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1288.000 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+WARNING: [HDF 64-28] Could not delete directory C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.runs/synth_1/.Xil/Vivado-15552-lenovo/design.hdf
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Will/Dropbox/classes/ELEC 5210 - Hardware Security I/project/AES-master/Full Project Zipped/AES_backup/AES_UART.runs/synth_1/controller.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1288.000 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file controller_utilization_synth.rpt -pb controller_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 11:07:55 2019...
